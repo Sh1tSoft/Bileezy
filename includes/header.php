@@ -1,7 +1,5 @@
 <?php
-
-session_start();
-
+require 'includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +12,7 @@ session_start();
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="assets/styles/css/master.css">
+    <link rel="stylesheet" href="assets/css/master.css">
     <!-- Material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -23,6 +21,7 @@ session_start();
 <body>
 <!-- HEADER (start) -->
 <header class="header__main">
-    <a class="header__logo" href="index.php"><img src="assets/app/logo.svg"><h1>CinePhile</h1></a>
+    <!-- Header logo -->
+    <a class="header__logo" href="#"><img src="#"></a>
 </header>
 <!-- Header (end) -->
