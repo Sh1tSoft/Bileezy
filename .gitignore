@@ -1,0 +1,5 @@
+# Ignore these files please :)
+.idea
+.idea/*
+assets/.sass-cache
+assets/.sass-cache/*
