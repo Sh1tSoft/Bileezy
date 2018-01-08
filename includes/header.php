@@ -23,6 +23,7 @@ session_start();
 <body>
 <!-- HEADER (start) -->
 <header class="header__main">
-    <a class="header__logo" href="index.php"><img src="assets/app/logo.svg"><h1>CinePhile</h1></a>
+    <!-- Header logo -->
+    <a class="header__logo" href="#"><img src="#"></a>
 </header>
 <!-- Header (end) -->

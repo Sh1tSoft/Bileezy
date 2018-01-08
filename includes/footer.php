@@ -1,6 +1,39 @@
 <!-- FOOTER (start) -->
-<footer>
-
+<footer class="row footer__main">
+    <div class="col-md-3">
+        <h3>Links</h3>
+        <ul>
+            <li><a href="#">Forside</a></li>
+            <li><a href="#">Bilannoncer</a></li>
+            <li><a href="#">Om</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Service Betingelser</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h3>Info</h3>
+        <ul>
+            <li><a href="#">Alfa Romeo</a></li>
+            <li><a href="#">Audi</a></li>
+            <li><a href="#">BMW</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h3>Info</h3>
+        <ul>
+            <li><a href="#">Alfa Romeo</a></li>
+            <li><a href="#">Audi</a></li>
+            <li><a href="#">BMW</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h3>Info</h3>
+        <ul>
+            <li><a href="#">Alfa Romeo</a></li>
+            <li><a href="#">Audi</a></li>
+            <li><a href="#">BMW</a></li>
+        </ul>
+    </div>
 </footer>
 <!-- FOOTER (end) -->
 
