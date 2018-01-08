@@ -145,6 +145,8 @@ include '../includes/createcarmodel.php';
             <option value="<?=$row['type']?>"><?=$row['type']?></option>
         <?php endwhile; ?>
     </select>
+    <label for="tank_capacity">Tank Capacity</label>
+    <input type="text" name="tank_capacity">
     <label for="year_start">Start Year</label>
     <input type="text" name="year_start">
     <label for="year_end">End Year</label>

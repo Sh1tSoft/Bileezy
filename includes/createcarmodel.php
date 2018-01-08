@@ -26,9 +26,15 @@
             $load_capacity = mysqli_real_escape_string($conn, $_POST['load_capacity']);
             $seats = mysqli_real_escape_string($conn, $_POST['seats']);
             $fuel_type = mysqli_real_escape_string($conn, $_POST['fuel_type']);
+            $tank_capacity = mysqli_real_escape_string($conn, $_POST['tank_capacity']);
             $year_start = mysqli_real_escape_string($conn, $_POST['year_start']);
             $years_end = mysqli_real_escape_string($conn, $_POST['year_end']);
 
+            // $arrVals = array(
+            //     $brand, $modelName, $body_type, $equipment_model, $engine_size, $engine_type, $horsepower, $torque, $consumption, $top_speed, $acceleration, $transmission_type,
+            //     $gears, $new_price, $weight, $doors, $airbags, $cylinders, $drivetrain, $load_capacity, $seats, $fuel_type, $year_start, $years_end                        
+            // );
+        
 
             //Insert the user into the database
             $sql = "INSERT INTO car_model_info (
@@ -54,10 +60,14 @@
                 load_capacity,
                 seats,
                 fuel_type,
+                tank_capacity,
                 year_start,
                 year_end
                 )
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                //VALUES ('".implode("','",$arrVals)."');";
+                //echo $sql;
+
             //Create prepared statement
             $stmt = mysqli_stmt_init($conn);
 
@@ -66,9 +76,9 @@
                 echo mysqli_errno($this->$conn);
             } else {
                 //Bind parameters to the placeholder
-                //"ssssdsiididsiiiiiississs"
-                mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssssss", $brand, $modelName, $body_type, $equipment_model, $engine_size, $engine_type, $horsepower, $torque, $consumption, $top_speed, $acceleration, $transmission_type,
-                $gears, $new_price, $weight, $doors, $airbags, $cylinders, $drivetrain, $load_capacity, $seats, $fuel_type, $year_start, $years_end);
+                //"ssssdsiididsiiiiiissisiss"
+                mysqli_stmt_bind_param($stmt, "sssssssssssssssssssssssss", $brand, $modelName, $body_type, $equipment_model, $engine_size, $engine_type, $horsepower, $torque, $consumption, $top_speed, $acceleration, $transmission_type,
+                $gears, $new_price, $weight, $doors, $airbags, $cylinders, $drivetrain, $load_capacity, $seats, $fuel_type, $tank_capacity, $year_start, $years_end);
 
                 //Run query in database
                 mysqli_stmt_execute($stmt);
