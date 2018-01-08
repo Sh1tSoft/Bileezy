@@ -37,12 +37,12 @@
                 <?php
                 /* - Newest products selection & while loop - */
                 $query = "SELECT * FROM products ORDER BY creation_date DESC LIMIT 8";
-                $result = $con->query($query);
+                $result = $conn->query($query);
                 while ($row = $result->fetch_assoc()) : ?>
                     <?php
                     /* - Image Query - */
                     $imgQuery = "SELECT image_path FROM product_image WHERE product_id = " . $row['id'] . " LIMIT 1";
-                    $imgResult = $con->query($imgQuery);
+                    $imgResult = $conn->query($imgQuery);
                     $imgRow = $imgResult->fetch_assoc();
                     ?>
 
@@ -66,43 +66,47 @@
     <section class="inspiration__main">
         <h3 class="inspiration__main--headline">Inspiration til din Søgning</h3>
         <!-- First Row -->
-        <a href="#" class="col-md-6 inspiration__main--category">
-            <figure>
-                <img src="#">
-                <figcaption>Søg på 5 sæder</figcaption>
-            </figure>
-        </a>
-        <a href="#" class="col-md-6 inspiration__main--category">
-            <figure>
-                <img src="#">
-                <figcaption>Søg på 7 sæder</figcaption>
-            </figure>
-        </a>
+        <div class="row">
+            <a href="#" class="col-md-6 inspiration__main--category">
+                <figure>
+                    <img src="#">
+                    <figcaption>Søg på 5 sæder</figcaption>
+                </figure>
+            </a>
+            <a href="#" class="col-md-6 inspiration__main--category">
+                <figure>
+                    <img src="#">
+                    <figcaption>Søg på 7 sæder</figcaption>
+                </figure>
+            </a>
+        </div>
         <!-- Second Row -->
-        <a href="#" class="col-md-3 inspiration__main--category">
-            <figure>
-                <img src="#">
-                <figcaption>Søg på 3 dørs</figcaption>
-            </figure>
-        </a>
-        <a href="#" class="col-md-3 inspiration__main--category">
-            <figure>
-                <img src="#">
-                <figcaption>Søg på 5 dørs</figcaption>
-            </figure>
-        </a>
-        <a href="#" class="col-md-3 inspiration__main--category">
-            <figure>
-                <img src="#">
-                <figcaption>Søg på elbil</figcaption>
-            </figure>
-        </a>
-        <a href="#" class="col-md-3 inspiration__main--category">
-            <figure>
-                <img src="#">
-                <figcaption>Søg på bybil</figcaption>
-            </figure>
-        </a>
+        <div class="row">
+            <a href="#" class="col-md-3 inspiration__main--category">
+                <figure>
+                    <img src="#">
+                    <figcaption>Søg på 3 dørs</figcaption>
+                </figure>
+            </a>
+            <a href="#" class="col-md-3 inspiration__main--category">
+                <figure>
+                    <img src="#">
+                    <figcaption>Søg på 5 dørs</figcaption>
+                </figure>
+            </a>
+            <a href="#" class="col-md-3 inspiration__main--category">
+                <figure>
+                    <img src="#">
+                    <figcaption>Søg på elbil</figcaption>
+                </figure>
+            </a>
+            <a href="#" class="col-md-3 inspiration__main--category">
+                <figure>
+                    <img src="#">
+                    <figcaption>Søg på bybil</figcaption>
+                </figure>
+            </a>
+        </div>
     </section>
     <!-- SEARCH INSPIRATION (end) -->
 
