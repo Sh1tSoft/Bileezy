@@ -1,14 +1,30 @@
 .header__main
   padding-top: 40px
   .header__search
-    padding: 0 50px
     .header__search--input
-      border: 1.5px solid $brand__button
+      border: 1px solid $brand__button
       &:focus
         box-shadow: none
     .header__search--button
-      border: 1.5px solid $brand__button
+      border: 1px solid $brand__button
       background-color: $brand__button
       &:focus
         box-shadow: none
   .header__account
+    text-align: right
+    a
+      &:first-child
+        border-right: 2px solid $brand__button
+        padding-right: 5px
+        margin-right: 2px
+
+  .header__divider
+    padding: 10px
+    border-bottom: 1px solid $brand__button
+
+
+/*-- Desktop styles
+@media only screen and (min-width: 960px)
+  .header__main
+    .header__search
+      padding: 0 50px

@@ -43,6 +43,6 @@ require 'includes/dbh.inc.php';
             <a href="#">Log ind</a>
         </div>
     </div>
-    <div class="devider"
+    <div class="header__divider"></div>
 </header>
 <!-- Header (end) -->
