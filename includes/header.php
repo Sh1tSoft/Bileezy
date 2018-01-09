@@ -9,6 +9,8 @@ require 'includes/dbh.inc.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#E91E63" id="theme_color">
     <title>Bileezy</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- Custom stylesheet -->
@@ -43,6 +45,10 @@ require 'includes/dbh.inc.php';
             <a href="#">Log ind</a>
         </div>
     </div>
+    <!-- DIVIDER -->
     <div class="header__divider"></div>
+
+
+
 </header>
 <!-- Header (end) -->

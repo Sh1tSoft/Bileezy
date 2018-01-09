@@ -26,29 +26,22 @@ if (!empty($_SESSION['email'])) {
             $query = "SELECT * FROM users WHERE email = '$email'";
             $result = $conn->query($query);
             if ($result->num_rows > 0) {
-                $changevalue1 = $email;
-                $changeinput1 = "has-success";
                 $password = $_POST['password'];
                 $row = $result->fetch_assoc();
                 if ($password == $row['password']) {
                     $_SESSION['email'] = $email;
                     header('Location: index.php');
-                } else {
-                    $changeinput2 = "has-mistake";
-                    $changeplaceholder2 = "Wrong Password";
+                   }
                 }
-            } else {
-                $changeinput1 = "has-mistake";
-                $changeplaceholder1 = "Wrong email";
             }
         }
     }
-}
+
 
  ?>
 
 <!--- HEADER SECTION END --->
-
+<a href="login.php?logout=true">Log out</a>
 <section>
   <div class="container">
     <div class="login-form">
