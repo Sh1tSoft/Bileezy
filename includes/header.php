@@ -42,7 +42,7 @@ require 'includes/dbh.inc.php';
         <!-- Account & Login -->
         <div class="header__account col-md-3">
             <a href="#">Opret konto</a>
-            <a href="#">Log ind</a>
+            <a href="login.php">Log ind</a>
         </div>
     </div>
     <div class="devider"></div>
