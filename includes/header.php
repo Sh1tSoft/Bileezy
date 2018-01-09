@@ -49,7 +49,13 @@ require 'includes/dbh.inc.php';
     <div class="header__divider"></div>
 
     <!-- NAVBAR -->
-    
+    <section class="header__nav">
+        <a href="#">Forside</a>
+        <a href="#">Bilannoncer</a>
+        <a href="#">Om</a>
+        <a href="#">Kontakt</a>
+    </section>
+
 
 </header>
-<!-- Header (end) -->
+<!-- HEADER (end) -->
