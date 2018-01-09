@@ -41,8 +41,28 @@ require 'includes/dbh.inc.php';
         </div>
         <!-- Account & Login -->
         <div class="header__account col-md-3">
-            <a href="#">Opret konto</a>
-            <a href="login.php">Log ind</a>
+          <?php
+          if (session_status() == PHP_SESSION_NONE) {
+              session_start();
+          }
+          ?>
+
+          <?php if (!empty($_SESSION['email'])) : ?>
+          <?php else: ?>
+              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="login.php">Opret Konto</a>
+              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="login.php">Log ind</a>
+          <?php endif; ?>
+          <?php if (basename($_SERVER['PHP_SELF']) != "index.php") : ?>
+          <?php endif;?>
+          <?php if (!empty($_SESSION['email'])) : ?>
+          <?php endif; ?>
+      <?php if (!empty($_SESSION['email'])) : ?>
+          <?php if(!empty($value) && $value == 1) : ?>
+          <?php else: ?>
+          <?php endif; ?>
+            <a href="account.php">Konto</a>
+            <a href="login.php?logout=true">Log ud</a>
+      <?php endif; ?>
         </div>
     </div>
     <!-- DIVIDER -->
