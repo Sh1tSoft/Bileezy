@@ -48,7 +48,8 @@ require 'includes/dbh.inc.php';
     <!-- DIVIDER -->
     <div class="header__divider"></div>
 
-
+    <!-- NAVBAR -->
+    
 
 </header>
 <!-- Header (end) -->
