@@ -71,13 +71,13 @@
         <div class="row">
             <a href="#" class="col-md-6 inspiration__main--category">
                 <figure>
-                    <img src="#">
+                    <img src="assets/img/5_seats.jpg">
                     <figcaption>Søg på 5 sæder</figcaption>
                 </figure>
             </a>
             <a href="#" class="col-md-6 inspiration__main--category">
                 <figure>
-                    <img src="#">
+                    <img src="assets/img/7_seats.jpg">
                     <figcaption>Søg på 7 sæder</figcaption>
                 </figure>
             </a>
