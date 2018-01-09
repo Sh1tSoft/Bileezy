@@ -1,7 +1,7 @@
 <?php
     include 'dbh.inc.php';
 
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['create'])) {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $brand = mysqli_real_escape_string($conn, $_POST['brand']);
@@ -84,8 +84,7 @@
                 mysqli_stmt_execute($stmt);
 
                 $conn->close();
-                //header("Location: ../index.php?added");
-                echo "Det virkede";
+                header("Location: ../create/carmodel.php");
             }
         }
     }

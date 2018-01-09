@@ -1,10 +1,10 @@
 <?php
     include_once 'dbh.inc.php';
 
-    if(isset($_POST['submit'])) {
+    if(isset($_POST['edit'])) {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            $modelId
+            $modelId = $_POST['id'];
         
             $brand = mysqli_real_escape_string($conn, $_POST['brand']);
             $modelName = mysqli_real_escape_string($conn, $_POST['model_name']);
@@ -58,18 +58,17 @@
                 `fuel_type`=?,
                 `tank_capacity`=?,
                 `year_start`=?,
-                `year_end`=?,
+                `year_end`=?
                 WHERE id = $modelId";
                 //Create second prepared statement
                 $stmt2 = mysqli_stmt_init($conn);
 
                 //Check if prepared statement fails
                 if (!mysqli_stmt_prepare($stmt2, $sql)) {
-                    header("Location: ../index.php?error");
-                    exit();
+                    echo mysqli_errno($this->$conn);
                 } else {
                     //Bind parameters to the placeholder
-                    mysqli_stmt_bind_param($stmt, "sssssssssssssssssssssssss", $brand, $modelName, $body_type, $equipment_model, $engine_size, $engine_type, $horsepower, $torque, $consumption, $top_speed, $acceleration, $transmission_type,
+                    mysqli_stmt_bind_param($stmt2, "ssssdsiididsiiiiiissisiii", $brand, $modelName, $body_type, $equipment_model, $engine_size, $engine_type, $horsepower, $torque, $consumption, $top_speed, $acceleration, $transmission_type,
                     $gears, $new_price, $weight, $doors, $airbags, $cylinders, $drivetrain, $load_capacity, $seats, $fuel_type, $tank_capacity, $year_start, $years_end);
 
                     //Run query in database
@@ -78,5 +77,5 @@
             }
         }
                     $conn->close();
-                    header("Location: ".$doc_root."/admin/donors.php?edited");
+                    header("Location: ../create/carmodel.php");
 ?>

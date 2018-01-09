@@ -5,8 +5,7 @@
 </style>
 
 <?php 
-include '../includes/dbh.inc.php'; 
-include '../includes/createcarmodel.php';
+include '../includes/dbh.inc.php';
 ?>
 
 <a href="?create">Create Model</a><br><br>
@@ -20,7 +19,7 @@ include '../includes/createcarmodel.php';
 
 <?php if(isset($_GET['create'])) : ?>
 
-<form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
+<form action="/includes/createcarmodel.php" method="POST">
     <label for="brand">Brand</label>
     <select name="brand">
         <?php 
@@ -162,7 +161,7 @@ include '../includes/createcarmodel.php';
     <input type="text" name="year_start">
     <label for="year_end">End Year</label>
     <input type="text" name="year_end">
-    <button type="submit" name="submit">Submit</button>
+    <button type="submit" name="create">Submit</button>
 </form>
 
 
@@ -189,14 +188,14 @@ include '../includes/createcarmodel.php';
 
 <?php if ($rowall = $resultall->fetch_assoc()) : ?>
 
-<form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
+<form action="/includes/updatecarmodel.php" method="POST">
     <label for="brand">Brand</label>
-    <select name="brand">
+    <select name="brand" id="category">
         <?php 
             $sql = "SELECT * FROM car_brands";
             $result = $conn->query($sql);
         ?>
-        <option value=""><?=$rowall['brand']?></option>
+        <option value="<?=$rowall['brand']?>"><?=$rowall['brand']?></option>
         <?php while ($row = $result->fetch_assoc()) : ?>
             <option value="<?=$row['brand']?>"><?=$row['brand']?></option>
         <?php endwhile; ?>
@@ -339,7 +338,8 @@ include '../includes/createcarmodel.php';
     <input type="text" value="<?=$rowall['year_start']?>" name="year_start">
     <label for="year_end">End Year</label>
     <input type="text" value="<?=$rowall['year_end']?>" name="year_end">
-    <button type="submit" name="submit">Submit</button>
+    <input type="hidden" name="id" value="<?=$_GET['edit']?>">
+    <button type="submit" name="edit">Submit</button>
 </form>
 
 <?php endif; ?>
@@ -386,7 +386,10 @@ $result = $conn->query($sql);
     <?=$row['tank_capacity']?> |
     <?=$row['year_start']?> |
     <?=$row['year_end']?> |
-    <a href="?edit=<?=$row['id']?>">Edit</a>
+    <a href="?edit=<?=$row['id']?>">Edit</a><br><br>
 <?php endwhile; ?>
 
 <?php endif; ?>
+
+
+<?php include '../includes/footer.php'; ?>

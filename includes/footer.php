@@ -48,6 +48,37 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+<script>
+    var optionValues =[];
+$('#category option').each(function(){
+   if($.inArray(this.value, optionValues) >-1){
+      $(this).remove()
+   }else{
+      optionValues.push(this.value);
+   }
+});
+</script>
+<script type="text/javascript">
+    var opt = {};
+    $("#category > option").each(function () {
+        if(opt[$(this).text()]) {
+            $(this).remove();
+        } else {
+            opt[$(this).text()] = $(this).val();
+        }
+    });
 
+    </script>
+    <!-- Remove doubles from selections (admin/edit/product.php) -->
+    <script>
+          var usedNames = {};
+          $("select[name='brand'] > option").each(function () {
+            if(usedNames[this.text]) {
+              $(this).remove();
+            } else {
+              usedNames[this.text] = this.value;
+            }
+          });
+        </script>
 <!-- BODY (end) -->
 </body>
