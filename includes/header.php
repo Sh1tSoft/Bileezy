@@ -50,10 +50,12 @@ require 'includes/dbh.inc.php';
 
     <!-- NAVBAR -->
     <section class="header__nav">
-        <a href="#">Forside</a>
-        <a href="#">Bilannoncer</a>
-        <a href="#">Om</a>
-        <a href="#">Kontakt</a>
+        <ul>
+            <li><a href="#">Forside</a></li>
+            <li><a href="#">Bilannoncer</a></li>
+            <li><a href="#">Om</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
     </section>
 
 

@@ -5,6 +5,6 @@ assets/.sass-cache
 assets/.sass-cache/*
 assets/css
 assets/css/*
-/nbproject/private/
+nbproject/private/
 nbproject/project.xml
 nbproject/project.properties
