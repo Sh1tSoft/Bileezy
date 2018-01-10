@@ -5,6 +5,7 @@ assets/.sass-cache
 assets/.sass-cache/*
 assets/css/master.css
 assets/css/master.css.map
+includes/dbh.inc.php
 nbproject/private/
 nbproject/project.xml
 nbproject/project.properties
