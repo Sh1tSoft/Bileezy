@@ -1,5 +1,6 @@
 <!-- FOOTER (start) -->
 <footer class="container footer__main">
+    <div class="footer__divider"></div>
     <div class="row">
         <div class="col-md-3 footer__section">
             <h3>Links</h3>
