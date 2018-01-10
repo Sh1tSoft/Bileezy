@@ -3,7 +3,9 @@
 <section class="container">
     <div class="row">
         <div class="col-md-6">
-            <picture></picture>
+            <picture>
+                <img class="car__image" src="assets/img/3.jpg">
+            </picture>
             <h1>
                 Bil-smart i en fart
             </h1>
@@ -17,7 +19,9 @@
         </div>
 
         <div class="col-md-6">
-            <picture></picture>
+            <picture>
+                <img class="car__image" src="assets/img/3.jpg">
+            </picture>
             <h1>
                 Bil-smart i en fart
             </h1>
@@ -33,7 +37,9 @@
 
     <div class="row">
         <div class="col-md-6">
-            <picture></picture>
+            <picture>
+                <img class="car__image" src="assets/img/3.jpg">
+            </picture>
             <h1>
                 Bil-smart i en fart gjgygjgj
             </h1>
@@ -47,7 +53,9 @@
         </div>
 
         <div class="col-md-6">
-            <picture></picture>
+            <picture>
+                <img class="car__image" src="assets/img/3.jpg">
+            </picture>
             <h1>
                 Bil-smart i en fart
             </h1>
@@ -63,11 +71,13 @@
 
     <div class="row">
         <div class="col-md-6">
-            <picture></picture>
+            <picture>
+                <img class="car__image" src="assets/img/3.jpg">
+            </picture>
             <h1>
                 Bil-smart i en fart
             </h1>
-            <button type="button">Årgang: -</button>
+            <button class="button__products" type="button">Årgang: -</button>
             <button type="button">KM: -</button>
             <button type="button">Brændstof: -</button>
             <button type="button">KM/L: -</button>
@@ -77,7 +87,9 @@
         </div>
 
         <div class="col-md-6">
-            <picture></picture>
+            <picture>
+                <img class="car__image" src="assets/img/3.jpg">
+            </picture>
             <h1>
                 Bil-smart i en fart
             </h1>
