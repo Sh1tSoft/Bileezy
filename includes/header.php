@@ -1,30 +1,25 @@
 <?php
-     if (session_status() == PHP_SESSION_NONE) {
-          session_start();
-     }
-
-    require 'dbh.inc.php';
+require 'dbh.inc.php';
 ?>
 
-
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#E91E63" id="theme_color">
     <title>Bileezy</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="<?=$root?>/assets/css/master.css">
+    <link rel="stylesheet" href="/assets/css/master.css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" href="<?=$root?>/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="<?=$root?>/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
 </head>
 
@@ -34,7 +29,7 @@
 <header class="header__main container">
     <div class="row">
         <!-- Header logo -->
-        <a class="header__logo col-md-3" href="#"><img src="<?=$root?>/assets/img/logo.png"></a>
+        <a class="header__logo col-md-3" href="#"><img src="/assets/img/logo.png"></a>
         <!-- Search bar -->
         <div class="col-md-6">
             <div class="input-group header__search">
@@ -46,7 +41,11 @@
         </div>
         <!-- Account & Login -->
         <div class="header__account col-md-3">
-
+          <?php
+          if (session_status() == PHP_SESSION_NONE) {
+              session_start();
+          }
+          ?>
 
           <?php if (!empty($_SESSION['email'])) : ?>
           <?php else: ?>
@@ -61,8 +60,8 @@
           <?php if(!empty($value) && $value == 1) : ?>
           <?php else: ?>
           <?php endif; ?>
-            <a href="<?=$root?>/account.php">Konto</a>
-            <a href="<?=$root?>/login.php?logout=true">Log ud</a>
+            <a href="account.php">Konto</a>
+            <a href="login.php?logout=true">Log ud</a>
       <?php endif; ?>
         </div>
     </div>
@@ -72,8 +71,8 @@
     <!-- NAVBAR -->
     <section class="header__nav">
         <ul>
-            <li><a href="#">Forside</a></li>
-            <li><a href="<?=$root?>/products.php">Bilannoncer</a></li>
+            <li><a href="index.php">Forside</a></li>
+            <li><a href="../products.php">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>

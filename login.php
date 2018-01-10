@@ -46,16 +46,16 @@ if (!empty($_SESSION['email'])) {
     <div class="login-form">
       <form action="" method="post">
         <div class="email">
-          <i class="material-icons">person</i>
+          <i class="material-icons">person_outline</i>
           <input type="email" name="email" placeholder="Email">
         </div>
 
         <div class="password">
           <i class="material-icons">lock_open</i>
-          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="password" placeholder="Adganskode">
         </div>
         <div class="form-actions">
-          <p>Ny bruger?</p> <a href="#"> Opret Bruger</a>
+          <p>Ny bruger?</p> <a href="#"> Opret Konto</a>
           <button class="form-btn-2" type="submit" name="login-button">LOG IND</button>
         </div>
       </form>
