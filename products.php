@@ -9,11 +9,23 @@
             <h1>
                 Bil-smart i en fart
             </h1>
-            <button type="button">Årgang: -</button>
-            <button type="button">KM: -</button>
-            <button type="button">Brændstof: -</button>
-            <button type="button">KM/L: -</button>
-            <p>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">ÅRGANG:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">KM:</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                </div>
+            </div>
+                <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim eget commodo ornare. Praesent sit amet egestas orci. Integer in ante sagittis, ultricies lacus sit amet, efficitur justo. Donec nec pharetra enim, vitae elementum mauris. Proin elit quam, tristique nec mauris quis, volutpat interdum nisl. Ut non ligula ut odio porta semper. Aenean condimentum leo sit amet dui bibendum porta. In non malesuada sem, eget euismod ipsum. Quisque vitae odio eros.
             </p>
         </div>
@@ -25,10 +37,22 @@
             <h1>
                 Bil-smart i en fart
             </h1>
-            <button type="button">Årgang: -</button>
-            <button type="button">KM: -</button>
-            <button type="button">Brændstof: -</button>
-            <button type="button">KM/L: -</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">ÅRGANG:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">KM:</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                </div>
+            </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim eget commodo ornare. Praesent sit amet egestas orci. Integer in ante sagittis, ultricies lacus sit amet, efficitur justo. Donec nec pharetra enim, vitae elementum mauris. Proin elit quam, tristique nec mauris quis, volutpat interdum nisl. Ut non ligula ut odio porta semper. Aenean condimentum leo sit amet dui bibendum porta. In non malesuada sem, eget euismod ipsum. Quisque vitae odio eros.
             </p>
@@ -43,10 +67,22 @@
             <h1>
                 Bil-smart i en fart gjgygjgj
             </h1>
-            <button type="button">Årgang: -</button>
-            <button type="button">KM: -</button>
-            <button type="button">Brændstof: -</button>
-            <button type="button">KM/L: -</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">ÅRGANG:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">KM:</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                </div>
+            </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim eget commodo ornare. Praesent sit amet egestas orci. Integer in ante sagittis, ultricies lacus sit amet, efficitur justo. Donec nec pharetra enim, vitae elementum mauris. Proin elit quam, tristique nec mauris quis, volutpat interdum nisl. Ut non ligula ut odio porta semper. Aenean condimentum leo sit amet dui bibendum porta. In non malesuada sem, eget euismod ipsum. Quisque vitae odio eros.
             </p>
@@ -59,10 +95,22 @@
             <h1>
                 Bil-smart i en fart
             </h1>
-            <button type="button">Årgang: -</button>
-            <button type="button">KM: -</button>
-            <button type="button">Brændstof: -</button>
-            <button type="button">KM/L: -</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">ÅRGANG:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">KM:</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                </div>
+            </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim eget commodo ornare. Praesent sit amet egestas orci. Integer in ante sagittis, ultricies lacus sit amet, efficitur justo. Donec nec pharetra enim, vitae elementum mauris. Proin elit quam, tristique nec mauris quis, volutpat interdum nisl. Ut non ligula ut odio porta semper. Aenean condimentum leo sit amet dui bibendum porta. In non malesuada sem, eget euismod ipsum. Quisque vitae odio eros.
             </p>
@@ -77,10 +125,22 @@
             <h1>
                 Bil-smart i en fart
             </h1>
-            <button class="button__products" type="button">Årgang: -</button>
-            <button type="button">KM: -</button>
-            <button type="button">Brændstof: -</button>
-            <button type="button">KM/L: -</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">ÅRGANG:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">KM:</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                </div>
+            </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim eget commodo ornare. Praesent sit amet egestas orci. Integer in ante sagittis, ultricies lacus sit amet, efficitur justo. Donec nec pharetra enim, vitae elementum mauris. Proin elit quam, tristique nec mauris quis, volutpat interdum nisl. Ut non ligula ut odio porta semper. Aenean condimentum leo sit amet dui bibendum porta. In non malesuada sem, eget euismod ipsum. Quisque vitae odio eros.
             </p>
@@ -93,10 +153,22 @@
             <h1>
                 Bil-smart i en fart
             </h1>
-            <button type="button">Årgang: -</button>
-            <button type="button">KM: -</button>
-            <button type="button">Brændstof: -</button>
-            <button type="button">KM/L: -</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">ÅRGANG:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">KM:</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                </div>
+            </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim eget commodo ornare. Praesent sit amet egestas orci. Integer in ante sagittis, ultricies lacus sit amet, efficitur justo. Donec nec pharetra enim, vitae elementum mauris. Proin elit quam, tristique nec mauris quis, volutpat interdum nisl. Ut non ligula ut odio porta semper. Aenean condimentum leo sit amet dui bibendum porta. In non malesuada sem, eget euismod ipsum. Quisque vitae odio eros.
             </p>
