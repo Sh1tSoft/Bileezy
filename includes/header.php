@@ -3,7 +3,7 @@
           session_start();
      }
 
-    require 'dbh.inc.php';
+    //require 'dbh.inc.php';
 ?>
 
 
