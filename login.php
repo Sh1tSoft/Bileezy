@@ -42,7 +42,7 @@ if (!empty($_SESSION['email'])) {
 
 <!--- HEADER SECTION END --->
 <section>
-  <div class="container">
+  <div class="container full-height">
     <div class="login-form">
       <form action="" method="post">
         <div class="email">
@@ -62,3 +62,5 @@ if (!empty($_SESSION['email'])) {
     </div>
   </div>
 </section>
+
+<?php require 'includes/footer.php'; ?>
