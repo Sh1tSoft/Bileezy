@@ -18,8 +18,8 @@ require 'includes/dbh.inc.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- Custom stylesheet -->
     <link rel="stylesheet" href="assets/css/master.css">
-    <!-- Material icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
