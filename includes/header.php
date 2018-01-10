@@ -1,9 +1,13 @@
 <?php
+     if (session_status() == PHP_SESSION_NONE) {
+          session_start();
+     }
+
 require 'includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,11 +45,7 @@ require 'includes/dbh.inc.php';
         </div>
         <!-- Account & Login -->
         <div class="header__account col-md-3">
-          <?php
-          if (session_status() == PHP_SESSION_NONE) {
-              session_start();
-          }
-          ?>
+
 
           <?php if (!empty($_SESSION['email'])) : ?>
           <?php else: ?>
