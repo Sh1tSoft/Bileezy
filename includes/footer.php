@@ -4,7 +4,7 @@
         <div class="col-md-3">
             <h3>Links</h3>
             <ul>
-                <li><a href="#">Forside</a></li>
+                <li><a href="index.php">Forside</a></li>
                 <li><a href="#">Bilannoncer</a></li>
                 <li><a href="#">Om</a></li>
                 <li><a href="#">Kontakt</a></li>
@@ -28,11 +28,12 @@
             </ul>
         </div>
         <div class="col-md-3">
-            <h3>Info</h3>
+            <h3>Sociale Medier</h3>
             <ul>
-                <li><a href="#">Alfa Romeo</a></li>
-                <li><a href="#">Audi</a></li>
-                <li><a href="#">BMW</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="http://www.facebook.com"><img src="assets/img/facebook.png" class="footer__facebook"> </a></li>
+                <li><a href="#">Mere Facebook</a></li>
+                <li><a href="#">..... Facebook?</a></li>
             </ul>
         </div>
     </div>

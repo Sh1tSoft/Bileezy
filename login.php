@@ -1,11 +1,11 @@
-<!-- HEADER & BODY (start) -->
-<?php require 'includes/header.php'; ?>
+<?php
+/* - HEADER & BODY (start) - */
+require 'includes/header.php';
+?>
 
 <?php
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+
 // LOG OUT
 if (!empty($_GET['logout']) && $_GET['logout'] == "true") {
     unset($_SESSION['email']);

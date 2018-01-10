@@ -1,6 +1,5 @@
-<!-- HEADER & BODY (start) -->
 <?php require 'includes/header.php'; ?>
-
+<!-- HEADER & BODY (start) -->
 <main class="container">
     <!-- HERO IMAGE (start) -->
     <picture class="hero__img--main">
@@ -24,7 +23,7 @@
                 <li><a href="#">Peugeot</a></li>
                 <li><a href="#">Renault</a></li>
                 <li><a href="#">Seat</a></li>
-                <li><a href="#">Toyota</a></li>
+                <li><a href="#">Toyota</a></li> 
                 <li><a href="#">VW</a></li>
             </ul>
         </section>
@@ -86,25 +85,25 @@
         <div class="row">
             <a href="#" class="col-md-3 inspiration__main--category">
                 <figure>
-                    <img src="#">
+                    <img src="assets/img/3_doors.jpg">
                     <figcaption>Søg på 3 dørs</figcaption>
                 </figure>
             </a>
             <a href="#" class="col-md-3 inspiration__main--category">
                 <figure>
-                    <img src="#">
+                    <img src="assets/img/5_doors.jpg">
                     <figcaption>Søg på 5 dørs</figcaption>
                 </figure>
             </a>
             <a href="#" class="col-md-3 inspiration__main--category">
                 <figure>
-                    <img src="#">
+                    <img src="assets/img/elcar.jpg">
                     <figcaption>Søg på elbil</figcaption>
                 </figure>
             </a>
             <a href="#" class="col-md-3 inspiration__main--category">
                 <figure>
-                    <img src="#">
+                    <img src="assets/img/citycar.jpg">
                     <figcaption>Søg på bybil</figcaption>
                 </figure>
             </a>
