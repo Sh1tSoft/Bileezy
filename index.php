@@ -24,7 +24,7 @@
                 <li><a href="#">Peugeot</a></li>
                 <li><a href="#">Renault</a></li>
                 <li><a href="#">Seat</a></li>
-                <li><a href="#">Toyota</a></li>
+                <li><a href="#">Toyota</a></li> 
                 <li><a href="#">VW</a></li>
             </ul>
         </section>

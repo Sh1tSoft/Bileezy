@@ -72,7 +72,7 @@ require 'includes/dbh.inc.php';
     <section class="header__nav">
         <ul>
             <li><a href="#">Forside</a></li>
-            <li><a href="#">Bilannoncer</a></li>
+            <li><a href="../products.php">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>
