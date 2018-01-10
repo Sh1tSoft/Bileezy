@@ -1,8 +1,8 @@
 <?php require 'includes/header.php'; ?>
 
-<section class="container">
+<section class="container products__main">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 products__item">
             <picture>
                 <img class="car__image" src="assets/img/3.jpg">
             </picture>
@@ -22,7 +22,7 @@
                     <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                    <button type="button" class="btn btn-secondary btn-md">KM/L:</button>
                 </div>
             </div>
                 <p>
@@ -30,7 +30,7 @@
             </p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 products__item">
             <picture>
                 <img class="car__image" src="assets/img/3.jpg">
             </picture>
@@ -50,7 +50,7 @@
                     <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                    <button type="button" class="btn btn-secondary btn-md">KM/L:</button>
                 </div>
             </div>
             <p>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 products__item">
             <picture>
                 <img class="car__image" src="assets/img/3.jpg">
             </picture>
@@ -80,7 +80,7 @@
                     <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                    <button type="button" class="btn btn-secondary btn-md">KM/L:</button>
                 </div>
             </div>
             <p>
@@ -88,7 +88,7 @@
             </p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 products__item">
             <picture>
                 <img class="car__image" src="assets/img/3.jpg">
             </picture>
@@ -108,7 +108,7 @@
                     <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                    <button type="button" class="btn btn-secondary btn-md">KM/L:</button>
                 </div>
             </div>
             <p>
@@ -118,7 +118,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 products__item">
             <picture>
                 <img class="car__image" src="assets/img/3.jpg">
             </picture>
@@ -138,7 +138,7 @@
                     <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                    <button type="button" class="btn btn-secondary btn-md">KM/L:</button>
                 </div>
             </div>
             <p>
@@ -146,7 +146,7 @@
             </p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 products__item">
             <picture>
                 <img class="car__image" src="assets/img/3.jpg">
             </picture>
@@ -166,7 +166,7 @@
                     <button type="button" class="btn btn-secondary btn-md">BRÆNDSTOF:</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-secondary btn-mdmd">KM/L:</button>
+                    <button type="button" class="btn btn-secondary btn-md">KM/L:</button>
                 </div>
             </div>
             <p>
