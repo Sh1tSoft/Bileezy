@@ -1,7 +1,7 @@
 <!-- FOOTER (start) -->
 <footer class="container footer__main">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 footer__section">
             <h3>Links</h3>
             <ul>
                 <li><a href="index.php">Forside</a></li>
@@ -11,7 +11,7 @@
                 <li><a href="#">Service Betingelser</a></li>
             </ul>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 footer__section">
             <h3>Info</h3>
             <ul>
                 <li><a href="#">Alfa Romeo</a></li>
@@ -19,7 +19,7 @@
                 <li><a href="#">BMW</a></li>
             </ul>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 footer__section">
             <h3>Info</h3>
             <ul>
                 <li><a href="#">Alfa Romeo</a></li>
@@ -27,7 +27,7 @@
                 <li><a href="#">BMW</a></li>
             </ul>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 footer__section">
             <h3>Sociale Medier</h3>
             <ul>
                 <li><a href="#">Facebook</a></li>
