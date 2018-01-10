@@ -3,8 +3,9 @@
           session_start();
      }
 
-require 'includes/dbh.inc.php';
+    require 'includes/dbh.inc.php';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="da">

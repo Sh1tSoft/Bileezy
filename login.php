@@ -47,7 +47,8 @@ if (!empty($_SESSION['email'])) {
       <form action="" method="post">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <button type="submit" name="login-button">SIGN IN</button>
+        <button class="form-btn-1" type="submit" name="login-button">OPRET KONTO</button>
+        <button class="form-btn-2" type="submit" name="login-button">LOG IND</button>
       </form>
     </div>
   </div>
