@@ -1,4 +1,6 @@
-<?php require 'includes/header.php'; ?>
+<?php 
+$pageTitle = "Forside";
+require 'includes/header.php'; ?>
 <!-- HEADER & BODY (start) -->
 <main class="container">
     <!-- HERO IMAGE (start) -->

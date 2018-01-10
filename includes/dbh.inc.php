@@ -1,7 +1,7 @@
 <?php
 $dbServername = "localhost";
-$dbUsername = "admin";
-$dbPassword = "admin";
+$dbUsername = "root";
+$dbPassword = "";
 $dbName = "bileezy";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
@@ -9,5 +9,5 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 mysqli_set_charset($conn, 'utf8');
 
 
-$root = "/bileezy";
+$root = "";
 ?>
