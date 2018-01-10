@@ -52,8 +52,6 @@ if(isset($_POST['submit'])) {
                     //Move raw file
                     move_uploaded_file($fileTmpName, $fileDestinationRaw);
 
-                    sleep(5);
-
                     //Resize images from raw file
                     $image = WideImage::load($fileDestinationRaw);
                     $resizedMedium = $image->resize(600, 700);
