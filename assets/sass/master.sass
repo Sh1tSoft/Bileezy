@@ -1,0 +1,69 @@
+/*-- Master stylesheet
+
+/*-- Variables & mixins
+@import "vars/_colors.sass"
+@import "vars/_mixins.sass"
+
+
+/*-- Components
+@import "comps/_header.sass"
+@import "comps/_login.sass"
+@import "comps/_inspiration.sass"
+@import "comps/_products.sass"
+@import "comps/_footer.sass"
+
+
+
+
+/*-- Body styles
+body
+  font-family: Lato, sans-serif
+  margin: 0
+  padding: 0
+  font-size: 14px
+  font-weight: 400
+  line-height: 1.5
+  letter-spacing: .016em
+  -webkit-font-smoothing: antialiased
+  background-color: #fff
+  img
+    width: 100%
+
+  ul, ol
+    padding: 0
+    margin: 0
+    list-style: none
+
+  a
+    transition: 200ms
+    color: #000
+    font-weight: 600
+    &:focus, &:hover
+      text-decoration: none
+      color: $brand__button
+
+  h1, h2, h3, h4, h5
+    font-family: 'Josefin Sans', sans-serif
+
+  button
+    outline: 0
+    border: 0
+
+  \::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+    background-color: #F5F5F5
+
+  \::-webkit-scrollbar
+    width: 12px
+    background-color: #F5F5F5
+
+  \::-webkit-scrollbar-thumb
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+    background-color: #555
+      
+/*-- Desktop styles
+@media only screen and (min-width: 960px)
+
+
+
+/*-- Temporary styles :)
