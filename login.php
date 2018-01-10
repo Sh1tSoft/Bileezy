@@ -14,7 +14,6 @@ if (!empty($_GET['logout']) && $_GET['logout'] == "true") {
 }
 
 // LOGIN
-require 'includes/dbh.inc.php';
 if (!empty($_SESSION['email'])) {
     header('Location: index.php');
 } else {
@@ -36,9 +35,11 @@ if (!empty($_SESSION['email'])) {
             }
         }
     }
+    ?>
 
-
+<?php
     require_once 'includes/dbh.inc.php';
+    if(!empty($_POST['email'])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $full_name = $_POST["full_name"];
@@ -47,11 +48,12 @@ if (!empty($_SESSION['email'])) {
     $city = $_POST["city"];
     $phone = $_POST["phone"];
 
-    $query = "INSERT INTO `users`(`email`, `password`, `full_name`, 'address', 'zipcode', 'city', 'phone') VALUES ('$email' , '$password', '$full_name', '$address', $zipcode, '$city', $phone)";
+    $query = "INSERT INTO `users`(`email`, `password`, `full_name`, 'address', 'zipcode', 'city', 'phone') VALUES ('$email' , '$password', '$full_name', '$address', '$zipcode', '$city', '$phone')";
     $result = $conn->query($query);
     print_r($query);
     $conn->close();
- ?>
+  }
+?>
 
 <!--- HEADER SECTION END --->
 <section>
@@ -75,49 +77,50 @@ if (!empty($_SESSION['email'])) {
     </div>
 
     <div class="regi-form">
-      <form action="" method="post">
+      <form action="" method="post" name="regiform">
         <div class="email">
           <i class="material-icons">person_outline</i>
-          <input type="text" name="full_name" placeholder="Fulde Navn">
+          <input type="text" name="full_name" placeholder="Fulde Navn" required>
         </div>
 
         <div class="password">
           <i class="material-icons">mail_outline</i>
-          <input type="email" name="email" placeholder="Email">
+          <input type="email" name="email" placeholder="Email" required>
         </div>
 
         <div class="password">
           <i class="material-icons">lock_open</i>
-          <input type="password" name="password" placeholder="Adganskode">
+          <input type="password" name="password" placeholder="Adganskode" id="password" required>
         </div>
 
         <div class="password">
           <i class="material-icons">lock_open</i>
-          <input type="password" name="confirm-password" placeholder="Bekræft Adganskode">
+          <input type="password" name="confirm-password" placeholder="Bekræft Adganskode" id="confirmPassword" required>
+          <label class="error" for="confirmPassword" id="password_error"></label>
         </div>
 
         <div class="password">
           <i class="material-icons">location_on</i>
-          <input type="email" name="address" placeholder="Addresse">
+          <input type="text" name="address" placeholder="Addresse" required>
         </div>
 
         <div class="password">
           <i class="material-icons">smartphone</i>
-          <input type="phone" name="phone" placeholder="Telefon Nummer">
+          <input type="phone" name="phone" placeholder="Telefon Nummer" required>
         </div>
 
         <div class="password">
           <i class="material-icons">smartphone</i>
-          <input type="phone" name="zipcode" placeholder="Post Nummer">
+          <input type="number" name="zipcode" placeholder="Post Nummer" required>
         </div>
 
         <div class="password">
           <i class="material-icons">smartphone</i>
-          <input type="numnber" name="city" placeholder="By">
+          <input type="text" name="city" placeholder="By" required>
         </div>
         <div class="form-actions">
           <p>Allerede Bruger?</p> <a class="change-tab" href="#">Log ind</a>
-          <button type="submit" name="regi-button">OPRET KONTO</button>
+          <button type="submit" name="regi-button" id="submit">OPRET KONTO</button>
         </div>
       </form>
     </div>
