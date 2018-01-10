@@ -1,11 +1,11 @@
-<!-- HEADER & BODY (start) -->
-<?php require 'includes/header.php'; ?>
+<?php
+/* - HEADER & BODY (start) - */
+require 'includes/header.php';
+?>
 
 <?php
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+
 // LOG OUT
 if (!empty($_GET['logout']) && $_GET['logout'] == "true") {
     unset($_SESSION['email']);
@@ -41,7 +41,6 @@ if (!empty($_SESSION['email'])) {
  ?>
 
 <!--- HEADER SECTION END --->
-<a href="login.php?logout=true">Log out</a>
 <section>
   <div class="container">
     <div class="login-form">
@@ -53,6 +52,3 @@ if (!empty($_SESSION['email'])) {
     </div>
   </div>
 </section>
-
-<!-- FOOTER & BODY (end) -->
-<?php require 'includes/footer.php'; ?>
