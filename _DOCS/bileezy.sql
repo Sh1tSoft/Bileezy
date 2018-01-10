@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2018 at 12:28 PM
+-- Generation Time: Jan 10, 2018 at 12:36 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -36,15 +36,14 @@ CREATE TABLE `car_body_type` (
 -- Dumping data for table `car_body_type`
 --
 
-INSERT INTO `car_body_type` (`body_type`) VALUES
-('4x4'),
-('Cabriolet'),
-('Coupe'),
-('Hatchback'),
-('Sedan'),
-('Stationcar'),
-('SUV'),
-('Targa');
+UPDATE `car_body_type` SET `body_type` = '4x4' WHERE `car_body_type`.`body_type` = '4x4';
+UPDATE `car_body_type` SET `body_type` = 'Cabriolet' WHERE `car_body_type`.`body_type` = 'Cabriolet';
+UPDATE `car_body_type` SET `body_type` = 'Coupe' WHERE `car_body_type`.`body_type` = 'Coupe';
+UPDATE `car_body_type` SET `body_type` = 'Hatchback' WHERE `car_body_type`.`body_type` = 'Hatchback';
+UPDATE `car_body_type` SET `body_type` = 'Sedan' WHERE `car_body_type`.`body_type` = 'Sedan';
+UPDATE `car_body_type` SET `body_type` = 'Stationcar' WHERE `car_body_type`.`body_type` = 'Stationcar';
+UPDATE `car_body_type` SET `body_type` = 'SUV' WHERE `car_body_type`.`body_type` = 'SUV';
+UPDATE `car_body_type` SET `body_type` = 'Targa' WHERE `car_body_type`.`body_type` = 'Targa';
 
 -- --------------------------------------------------------
 
@@ -60,9 +59,8 @@ CREATE TABLE `car_brands` (
 -- Dumping data for table `car_brands`
 --
 
-INSERT INTO `car_brands` (`brand`) VALUES
-('Audi'),
-('BMW');
+UPDATE `car_brands` SET `brand` = 'Audi' WHERE `car_brands`.`brand` = 'Audi';
+UPDATE `car_brands` SET `brand` = 'BMW' WHERE `car_brands`.`brand` = 'BMW';
 
 -- --------------------------------------------------------
 
@@ -103,9 +101,8 @@ CREATE TABLE `car_model_info` (
 -- Dumping data for table `car_model_info`
 --
 
-INSERT INTO `car_model_info` (`id`, `brand`, `model`, `car_body_type`, `equipment_model`, `engine_size`, `engine_type`, `horsepower`, `torque`, `consumption`, `top_speed`, `acceleration`, `transmission_type`, `gears`, `new_price`, `car_weight`, `doors`, `airbags`, `cylinders`, `drivetrain`, `load_capacity`, `seats`, `fuel_type`, `tank_capacity`, `year_start`, `year_end`) VALUES
-(16, 'Audi', 'Lort', '4x4', 'Noget', 13, 'Række 3', 127, 127, 1, 127, 1, 'Automatisk', 22, 2147483647, 127, 1, 1, 1, 'Baghjulstræk', '400', 1, 'Benzin', 100, 1999, 2000),
-(19, 'BMW', 'hej', '4x4', 'hej', 1, 'Række 3', 1, 1, 1, 1, 1, 'Automatisk', 3, 111, 1, 1, 1, 1, 'Baghjulstræk', '4', 1, 'Benzin', 6, 1999, 2000);
+UPDATE `car_model_info` SET `id` = 16,`brand` = 'Audi',`model` = 'Lort',`car_body_type` = '4x4',`equipment_model` = 'Noget',`engine_size` = 13,`engine_type` = 'Række 3',`horsepower` = 127,`torque` = 127,`consumption` = 1,`top_speed` = 127,`acceleration` = 1,`transmission_type` = 'Automatisk',`gears` = 22,`new_price` = 2147483647,`car_weight` = 127,`doors` = 1,`airbags` = 1,`cylinders` = 1,`drivetrain` = 'Baghjulstræk',`load_capacity` = '400',`seats` = 1,`fuel_type` = 'Benzin',`tank_capacity` = 100,`year_start` = 1999,`year_end` = 2000 WHERE `car_model_info`.`id` = 16;
+UPDATE `car_model_info` SET `id` = 19,`brand` = 'BMW',`model` = 'hej',`car_body_type` = '4x4',`equipment_model` = 'hej',`engine_size` = 1,`engine_type` = 'Række 3',`horsepower` = 1,`torque` = 1,`consumption` = 1,`top_speed` = 1,`acceleration` = 1,`transmission_type` = 'Automatisk',`gears` = 3,`new_price` = 111,`car_weight` = 1,`doors` = 1,`airbags` = 1,`cylinders` = 1,`drivetrain` = 'Baghjulstræk',`load_capacity` = '4',`seats` = 1,`fuel_type` = 'Benzin',`tank_capacity` = 6,`year_start` = 1999,`year_end` = 2000 WHERE `car_model_info`.`id` = 19;
 
 -- --------------------------------------------------------
 
@@ -121,9 +118,8 @@ CREATE TABLE `condition` (
 -- Dumping data for table `condition`
 --
 
-INSERT INTO `condition` (`condition`) VALUES
-('Brugt'),
-('Ny');
+UPDATE `condition` SET `condition` = 'Brugt' WHERE `condition`.`condition` = 'Brugt';
+UPDATE `condition` SET `condition` = 'Ny' WHERE `condition`.`condition` = 'Ny';
 
 -- --------------------------------------------------------
 
@@ -139,10 +135,9 @@ CREATE TABLE `drivetrain` (
 -- Dumping data for table `drivetrain`
 --
 
-INSERT INTO `drivetrain` (`drivetrain`) VALUES
-('Baghjulstræk'),
-('Firehjulstræk'),
-('Forhjulstræk');
+UPDATE `drivetrain` SET `drivetrain` = 'Baghjulstræk' WHERE `drivetrain`.`drivetrain` = 'Baghjulstræk';
+UPDATE `drivetrain` SET `drivetrain` = 'Firehjulstræk' WHERE `drivetrain`.`drivetrain` = 'Firehjulstræk';
+UPDATE `drivetrain` SET `drivetrain` = 'Forhjulstræk' WHERE `drivetrain`.`drivetrain` = 'Forhjulstræk';
 
 -- --------------------------------------------------------
 
@@ -158,17 +153,16 @@ CREATE TABLE `engine_type` (
 -- Dumping data for table `engine_type`
 --
 
-INSERT INTO `engine_type` (`engine_type`) VALUES
-('Række 3'),
-('Række 4'),
-('Række 5'),
-('Række 6'),
-('V10'),
-('V12'),
-('V6'),
-('V8'),
-('W12'),
-('W16');
+UPDATE `engine_type` SET `engine_type` = 'Række 3' WHERE `engine_type`.`engine_type` = 'Række 3';
+UPDATE `engine_type` SET `engine_type` = 'Række 4' WHERE `engine_type`.`engine_type` = 'Række 4';
+UPDATE `engine_type` SET `engine_type` = 'Række 5' WHERE `engine_type`.`engine_type` = 'Række 5';
+UPDATE `engine_type` SET `engine_type` = 'Række 6' WHERE `engine_type`.`engine_type` = 'Række 6';
+UPDATE `engine_type` SET `engine_type` = 'V10' WHERE `engine_type`.`engine_type` = 'V10';
+UPDATE `engine_type` SET `engine_type` = 'V12' WHERE `engine_type`.`engine_type` = 'V12';
+UPDATE `engine_type` SET `engine_type` = 'V6' WHERE `engine_type`.`engine_type` = 'V6';
+UPDATE `engine_type` SET `engine_type` = 'V8' WHERE `engine_type`.`engine_type` = 'V8';
+UPDATE `engine_type` SET `engine_type` = 'W12' WHERE `engine_type`.`engine_type` = 'W12';
+UPDATE `engine_type` SET `engine_type` = 'W16' WHERE `engine_type`.`engine_type` = 'W16';
 
 -- --------------------------------------------------------
 
@@ -184,13 +178,12 @@ CREATE TABLE `fuel_type` (
 -- Dumping data for table `fuel_type`
 --
 
-INSERT INTO `fuel_type` (`type`) VALUES
-('Benzin'),
-('Brint'),
-('Diesel'),
-('El'),
-('Hybrid (Benzin)'),
-('Hybrid (Diesel)');
+UPDATE `fuel_type` SET `type` = 'Benzin' WHERE `fuel_type`.`type` = 'Benzin';
+UPDATE `fuel_type` SET `type` = 'Brint' WHERE `fuel_type`.`type` = 'Brint';
+UPDATE `fuel_type` SET `type` = 'Diesel' WHERE `fuel_type`.`type` = 'Diesel';
+UPDATE `fuel_type` SET `type` = 'El' WHERE `fuel_type`.`type` = 'El';
+UPDATE `fuel_type` SET `type` = 'Hybrid (Benzin)' WHERE `fuel_type`.`type` = 'Hybrid (Benzin)';
+UPDATE `fuel_type` SET `type` = 'Hybrid (Diesel)' WHERE `fuel_type`.`type` = 'Hybrid (Diesel)';
 
 -- --------------------------------------------------------
 
@@ -240,9 +233,8 @@ CREATE TABLE `transmission_type` (
 -- Dumping data for table `transmission_type`
 --
 
-INSERT INTO `transmission_type` (`transmission_type`) VALUES
-('Automatisk'),
-('Manuel');
+UPDATE `transmission_type` SET `transmission_type` = 'Automatisk' WHERE `transmission_type`.`transmission_type` = 'Automatisk';
+UPDATE `transmission_type` SET `transmission_type` = 'Manuel' WHERE `transmission_type`.`transmission_type` = 'Manuel';
 
 -- --------------------------------------------------------
 
