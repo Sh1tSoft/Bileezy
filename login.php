@@ -41,7 +41,6 @@ if (!empty($_SESSION['email'])) {
  ?>
 
 <!--- HEADER SECTION END --->
-<a href="login.php?logout=true">Log out</a>
 <section>
   <div class="container">
     <div class="login-form">
@@ -53,6 +52,3 @@ if (!empty($_SESSION['email'])) {
     </div>
   </div>
 </section>
-
-<!-- FOOTER & BODY (end) -->
-<?php require 'includes/footer.php'; ?>
