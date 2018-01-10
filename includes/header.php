@@ -1,5 +1,5 @@
 <?php
-require 'includes/dbh.inc.php';
+require 'dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ require 'includes/dbh.inc.php';
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="/assets/css/master.css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
     <!-- Favicon -->
@@ -29,7 +29,7 @@ require 'includes/dbh.inc.php';
 <header class="header__main container">
     <div class="row">
         <!-- Header logo -->
-        <a class="header__logo col-md-3" href="#"><img src="assets/img/logo.png"></a>
+        <a class="header__logo col-md-3" href="#"><img src="/assets/img/logo.png"></a>
         <!-- Search bar -->
         <div class="col-md-6">
             <div class="input-group header__search">
