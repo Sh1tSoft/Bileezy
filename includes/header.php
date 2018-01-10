@@ -8,7 +8,7 @@ require 'dbh.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#E91E63" id="theme_color">
-    <title>Bileezy</title>
+    <title><?=$pageTitle?> | Bileezy</title>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <!-- Bootstrap stylesheet -->
