@@ -1,4 +1,7 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 require 'includes/dbh.inc.php';
 ?>
 
@@ -29,7 +32,7 @@ require 'includes/dbh.inc.php';
 <header class="header__main container">
     <div class="row">
         <!-- Header logo -->
-        <a class="header__logo col-md-3" href="#"><img src="assets/img/logo.png"></a>
+        <a class="header__logo col-md-3" href="index.php"><img src="assets/img/logo.png"></a>
         <!-- Search bar -->
         <div class="col-md-6">
             <div class="input-group header__search">
@@ -41,11 +44,7 @@ require 'includes/dbh.inc.php';
         </div>
         <!-- Account & Login -->
         <div class="header__account col-md-3">
-          <?php
-          if (session_status() == PHP_SESSION_NONE) {
-              session_start();
-          }
-          ?>
+
 
           <?php if (!empty($_SESSION['email'])) : ?>
           <?php else: ?>
@@ -71,7 +70,7 @@ require 'includes/dbh.inc.php';
     <!-- NAVBAR -->
     <section class="header__nav">
         <ul>
-            <li><a href="#">Forside</a></li>
+            <li><a href="index.php">Forside</a></li>
             <li><a href="#">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>

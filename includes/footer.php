@@ -4,7 +4,7 @@
         <div class="col-md-3">
             <h3>Links</h3>
             <ul>
-                <li><a href="#">Forside</a></li>
+                <li><a href="index.php">Forside</a></li>
                 <li><a href="#">Bilannoncer</a></li>
                 <li><a href="#">Om</a></li>
                 <li><a href="#">Kontakt</a></li>
