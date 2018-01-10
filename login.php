@@ -45,10 +45,19 @@ if (!empty($_SESSION['email'])) {
   <div class="container">
     <div class="login-form">
       <form action="" method="post">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <button class="form-btn-1" type="submit" name="login-button">OPRET KONTO</button>
-        <button class="form-btn-2" type="submit" name="login-button">LOG IND</button>
+        <div class="email">
+          <i class="material-icons">person</i>
+          <input type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="password">
+          <i class="material-icons">lock_open</i>
+          <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-actions">
+          <p>Ny bruger?</p> <a href="#"> Opret Bruger</a>
+          <button class="form-btn-2" type="submit" name="login-button">LOG IND</button>
+        </div>
       </form>
     </div>
   </div>
