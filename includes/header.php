@@ -14,12 +14,12 @@ require 'dbh.inc.php';
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="/assets/css/master.css">
+    <link rel="stylesheet" href="<?=$root?>/assets/css/master.css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="<?=$root?>/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?=$root?>/favicon.ico" type="image/x-icon"/>
 
 </head>
 
@@ -29,7 +29,7 @@ require 'dbh.inc.php';
 <header class="header__main container">
     <div class="row">
         <!-- Header logo -->
-        <a class="header__logo col-md-3" href="#"><img src="/assets/img/logo.png"></a>
+        <a class="header__logo col-md-3" href="#"><img src="<?=$root?>/assets/img/logo.png"></a>
         <!-- Search bar -->
         <div class="col-md-6">
             <div class="input-group header__search">
@@ -49,8 +49,8 @@ require 'dbh.inc.php';
 
           <?php if (!empty($_SESSION['email'])) : ?>
           <?php else: ?>
-              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="login.php">Opret Konto</a>
-              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="login.php">Log ind</a>
+              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="<?=$root?>/login.php">Opret Konto</a>
+              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="<?=$root?>/login.php">Log ind</a>
           <?php endif; ?>
           <?php if (basename($_SERVER['PHP_SELF']) != "index.php") : ?>
           <?php endif;?>
@@ -60,8 +60,8 @@ require 'dbh.inc.php';
           <?php if(!empty($value) && $value == 1) : ?>
           <?php else: ?>
           <?php endif; ?>
-            <a href="account.php">Konto</a>
-            <a href="login.php?logout=true">Log ud</a>
+            <a href="<?=$root?>/account.php">Konto</a>
+            <a href="<?=$root?>/login.php?logout=true">Log ud</a>
       <?php endif; ?>
         </div>
     </div>
@@ -71,8 +71,8 @@ require 'dbh.inc.php';
     <!-- NAVBAR -->
     <section class="header__nav">
         <ul>
-            <li><a href="index.php">Forside</a></li>
-            <li><a href="../products.php">Bilannoncer</a></li>
+            <li><a href="<?=$root?>index.php">Forside</a></li>
+            <li><a href="<?=$root?>/products.php">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>
