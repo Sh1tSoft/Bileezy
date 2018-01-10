@@ -3,7 +3,7 @@
           session_start();
      }
 
-    require 'includes/dbh.inc.php';
+    require 'dbh.inc.php';
 ?>
 
 
@@ -19,7 +19,7 @@
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="/assets/css/master.css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
     <!-- Favicon -->
@@ -61,8 +61,8 @@
           <?php if(!empty($value) && $value == 1) : ?>
           <?php else: ?>
           <?php endif; ?>
-            <a href="account.php">Konto</a>
-            <a href="login.php?logout=true">Log ud</a>
+            <a href="/account.php">Konto</a>
+            <a href="/login.php?logout=true">Log ud</a>
       <?php endif; ?>
         </div>
     </div>
@@ -73,7 +73,7 @@
     <section class="header__nav">
         <ul>
             <li><a href="#">Forside</a></li>
-            <li><a href="../products.php">Bilannoncer</a></li>
+            <li><a href="/products.php">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>
