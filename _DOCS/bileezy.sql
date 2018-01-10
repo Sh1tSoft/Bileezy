@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2018 at 11:23 AM
+-- Generation Time: Jan 10, 2018 at 12:28 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -104,7 +104,8 @@ CREATE TABLE `car_model_info` (
 --
 
 INSERT INTO `car_model_info` (`id`, `brand`, `model`, `car_body_type`, `equipment_model`, `engine_size`, `engine_type`, `horsepower`, `torque`, `consumption`, `top_speed`, `acceleration`, `transmission_type`, `gears`, `new_price`, `car_weight`, `doors`, `airbags`, `cylinders`, `drivetrain`, `load_capacity`, `seats`, `fuel_type`, `tank_capacity`, `year_start`, `year_end`) VALUES
-(16, 'BMW', 'Lort', '4x4', 'Noget', 13, 'Række 3', 127, 127, 1, 127, 1, 'Automatisk', 22, 2147483647, 127, 1, 1, 1, 'Baghjulstræk', '400', 1, 'Benzin', 100, 1999, 2000);
+(16, 'Audi', 'Lort', '4x4', 'Noget', 13, 'Række 3', 127, 127, 1, 127, 1, 'Automatisk', 22, 2147483647, 127, 1, 1, 1, 'Baghjulstræk', '400', 1, 'Benzin', 100, 1999, 2000),
+(19, 'BMW', 'hej', '4x4', 'hej', 1, 'Række 3', 1, 1, 1, 1, 1, 'Automatisk', 3, 111, 1, 1, 1, 1, 'Baghjulstræk', '4', 1, 'Benzin', 6, 1999, 2000);
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,7 @@ CREATE TABLE `products` (
   `model` int(11) DEFAULT NULL,
   `mileage` int(11) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
-  `description` varchar(300) COLLATE utf8_danish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_danish_ci,
   `condition` varchar(50) COLLATE utf8_danish_ci DEFAULT NULL,
   `last_check` date DEFAULT NULL,
   `service_ok` tinyint(1) DEFAULT NULL,
@@ -220,6 +221,7 @@ CREATE TABLE `products` (
 --
 
 CREATE TABLE `product_images` (
+  `id` int(11) NOT NULL,
   `product_id` int(11) DEFAULT NULL,
   `image_path` varchar(150) COLLATE utf8_danish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci;
@@ -327,6 +329,7 @@ ALTER TABLE `products`
 -- Indexes for table `product_images`
 --
 ALTER TABLE `product_images`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`),
   ADD KEY `image_id` (`image_path`);
 
@@ -351,13 +354,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `car_model_info`
 --
 ALTER TABLE `car_model_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `product_images`
+--
+ALTER TABLE `product_images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `users`
