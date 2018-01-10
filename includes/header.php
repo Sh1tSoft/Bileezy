@@ -71,7 +71,7 @@ require 'dbh.inc.php';
     <!-- NAVBAR -->
     <section class="header__nav">
         <ul>
-            <li><a href="#">Forside</a></li>
+            <li><a href="index.php">Forside</a></li>
             <li><a href="../products.php">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>
