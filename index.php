@@ -103,7 +103,7 @@
             </a>
             <a href="#" class="col-md-3 inspiration__main--category">
                 <figure>
-                    <img src="assets/img/">
+                    <img src="assets/img/citycar.jpg">
                     <figcaption>Søg på bybil</figcaption>
                 </figure>
             </a>
