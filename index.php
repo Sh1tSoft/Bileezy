@@ -8,7 +8,7 @@ require 'includes/header.php'; ?>
         <source srcset="#" media="min-width: 1290px"> <!-- Desktop Screens -->
         <source srcset="#" media="min-width: 960px"> <!-- Tablet Screens -->
         <source srcset="#" media="min-width: 0px"> <!-- Mobile Screens -->
-        <img src="#" alt="">
+        <img src="#" alt="SMUK-bil" role="presentation">
     </picture>
     <!-- HERO IMAGE (end) -->
 
