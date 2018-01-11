@@ -72,9 +72,9 @@ $('#category option').each(function(){
         }
     });
 
-    </script>
+</script>
     <!-- Remove doubles from selections (admin/edit/product.php) -->
-    <script>
+<script>
           var usedNames = {};
           $("select[name='brand'] > option").each(function () {
             if(usedNames[this.text]) {
@@ -83,6 +83,6 @@ $('#category option').each(function(){
               usedNames[this.text] = this.value;
             }
           });
-        </script>
+</script>
 <!-- BODY (end) -->
 </body>
