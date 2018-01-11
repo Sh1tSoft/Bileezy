@@ -1,6 +1,6 @@
 $(".show-desc").click(function () {
     $(".desc-text").toggleClass("toggle-desc");
-    $(this).html() == "Vis mere" ? $(this).html('Vis mindre') : $(this).html('Vis mere');
+    $(this).html() == "Se mindre" ? $(this).html('Se mere') : $(this).html('Se mindre');
 })
 
 

@@ -1,14 +1,56 @@
 
 .product-item
   h6
-    margin: 16px 0
     font-weight: 600
+    text-transform: uppercase
+    font-size: 18px
+  .car-info
+    background-color: #212121
+    text-align: center
+    min-width: 50%
+    margin: auto
+    padding: 12px 0
+    color: #fff
+    font-size: 14px
+    font-weight: 600
+    margin-bottom: 15px
+
+    .car-info-splitter
+      font-size: 20px
+      margin: 0 10px
+
+    .car-price::after
+      content: ' kr. '
+
+  .keypoint-container
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr
+    grid-column-gap: 16px
+    grid-row-gap: 16px
+    margin: 25px 0
+
+    .car-keypoint
+      display: inline-flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      border: 2px solid #212121
+      padding: 12px 10px
+      font-weight: 600
+      p
+        font-size: 14px
+        margin: 0
+        margin-right: 8px
+      span
+        font-size: 16px
+        margin-right: 8px
 
   .description
-    font-size: 14px
-    font-weight: 400
-    margin: 16px 0
     overflow: hidden
+    font-size: 16px
+    h6
+      font-size: 18px
     .toggle-desc
       max-height: 150px
 
@@ -16,281 +58,135 @@
     width: 100%
     text-align: center
     margin: auto
-.keypoint-container
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr 1fr
-  grid-column-gap: 16px
-  grid-row-gap: 16px
+    margin-top: 12px
 
-  .car-keypoint
-    display: inline-flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
-    border: 2px solid #E0E0E0
-    padding: 5px 10px
-    p
-      font-size: 12px
-      margin: 0
-      margin-right: 5px
-      font-weight: 400
-    span
-      font-size: 13px
-      margin-right: 5px
-      font-weight: 600
-.gear
-  margin: 16px 0
-  h6
-    text-align: center
-  ul li
-    display: inline
-    margin: 0 5px
-    font-weight: 600
-    font-size: 14px
-  ul li::after
-    content: ', '
-
-@media (max-width: 1024px)
-.keypoint-container
-  grid-template-columns: 1fr 1fr 1fr 1fr
-
-  .car-keypoint
-    padding: 16px 10px
-
-    p
+  .buy-info
+    margin: 16px 0
+    button
+      margin-bottom: 25px
+      width: 100%
+      border-radius: 4px
+      padding: 12.5px 25px
+      border: 2px solid $brand__button
+      font-size: 14px
+      font-weight: 700
+      cursor: pointer
+      display: block
+      background-color: $brand__button
+      color: #fff
+    .sell-name
+      text-align: center
       font-size: 16px
-      margin: 0
-      margin-right: 5px
+      text-transform: capitalize
+    .sell-info h6
+      text-align: center
+      font-size: 16px
       font-weight: 400
+      text-transform: capitalize
 
-    span
-      font-size: 17px
-      margin-right: 5px
-      font-weight: 600
-
-@media (max-width: 767px)
-  .car-keypoint
-    display: inline-flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
-    border: 2px solid #E0E0E0
-    padding: 5px 10px
-    p
-      font-size: 12px
-      margin: 0
-      margin-right: 5px
+  .gear
+    margin: 50px 0
+    h6
+      font-size: 18px
+    ul li
+      display: inline
+      padding: 0 50px 0 0
       font-weight: 400
-    span
-      font-size: 13px
-      margin-right: 5px
+      font-size: 16px
+
+
+
+
+@media (min-width: 1024px)
+  .product-item
+    margin: 50px 0
+    .car-info
+      background-color: #212121
+      text-align: center
+      min-width: 50%
+      margin: auto
+      padding: 20px 0
+      color: #fff
+      font-size: 18px
+      text-transform: uppercase
       font-weight: 600
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body
-  transform: rotate(0.5deg)
+      margin-bottom: 50px
+
+      .car-info-splitter
+        font-size: 26px
+        margin: 0 20px
+
+      .car-price::after
+        content: ' kr. '
+
+    .keypoint-container
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr
+      grid-column-gap: 16px
+      grid-row-gap: 16px
+      margin-bottom: 50px
+
+      .car-keypoint
+        display: inline-flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        border: 2px solid #212121
+        padding: 16px 10px
+        font-weight: 600
+        p
+          font-size: 14px
+          margin: 0
+          margin-right: 8px
+        span
+          font-size: 16px
+          margin-right: 8px
+
+    .description
+      margin: 16px 0
+      overflow: hidden
+      font-size: 16px
+      h6
+        font-size: 18px
+      .toggle-desc
+        max-height: 150px
+
+    .show-desc
+      width: 100%
+      text-align: center
+      margin: auto
+
+    .buy-info
+      margin: 16px 0
+      button
+        margin-bottom: 25px
+        width: 100%
+        border-radius: 4px
+        padding: 12.5px 25px
+        border: 2px solid $brand__button
+        font-size: 14px
+        font-weight: 700
+        cursor: pointer
+        display: block
+        background-color: $brand__button
+        color: #fff
+      .sell-name
+        font-size: 16px
+        text-transform: capitalize
+        text-align: left
+      .sell-info h6
+        font-size: 16px
+        font-weight: 400
+        text-transform: capitalize
+        text-align: left
+
+    .gear
+      margin: 16px 0
+      h6
+        font-size: 18px
+      ul li
+        display: inline
+        padding: 0 50px 0 0
+        font-weight: 400
+        font-size: 16px
