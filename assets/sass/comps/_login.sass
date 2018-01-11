@@ -7,18 +7,23 @@
   width: 50%
   padding: 50px 50px
 
-  form input
-    width: 100%
-    padding: 15px 25px 15px 65px
-    margin: 12.5px 0
-    border-radius: 4px
-    outline: none
-    border: 2px solid #eee
-    transition: 200ms
+  form
+    input
+      width: 100%
+      padding: 15px 25px 15px 65px
+      margin: 12.5px 0
+      border-radius: 4px
+      outline: none
+      border: 2px solid #eee
+      font-weight: 600
+      transition: 200ms
   form input:focus
     border-color: #ccc
-  form .email, form .password
+    color: $brand__button
+
+  form .icon
     position: relative
+
   form i
     position: absolute
     top: 28px

@@ -4,10 +4,12 @@ $dbUsername = "admin";
 $dbPassword = "admin";
 $dbName = "bileezy";
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
-mysqli_set_charset($conn, 'utf8');
-
+$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
+if ($conn->connect_errno) {
+    die('Connect Error: ' . $conn->connect_errno);
+}
+$conn->set_charset("utf8");
 
 $root = "";
 ?>
