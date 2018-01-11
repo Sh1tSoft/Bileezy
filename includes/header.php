@@ -47,8 +47,8 @@
         <div class="header__account col-md-3">
           <?php if (!empty($_SESSION['email'])) : ?>
           <?php else: ?>
-              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="<?=$root?>/login.php">Opret Konto</a>
-              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") { echo 'class="active-link"'; } ?> href="<?=$root?>/login.php">Log ind</a>
+              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") ?> href="<?=$root?>/regi.php">Opret Konto</a>
+              <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") ?> href="<?=$root?>/login.php">Log ind</a>
           <?php endif; ?>
           <?php if (basename($_SERVER['PHP_SELF']) != "index.php") : ?>
           <?php endif;?>
