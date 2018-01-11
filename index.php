@@ -1,14 +1,14 @@
-<?php 
+<?php
 $pageTitle = "Forside";
 require 'includes/header.php'; ?>
 <!-- HEADER & BODY (start) -->
 <main class="container">
     <!-- HERO IMAGE (start) -->
     <picture class="hero__img--main">
-        <source srcset="<?=$root?>/assets/img/hero.jpg" media="(min-width: 1290px)"> <!-- Desktop Screens -->
-        <source srcset="<?=$root?>/assets/img/hero.jpg" media="(min-width: 960px)"> <!-- Tablet Screens -->
-        <source srcset="<?=$root?>/assets/img/hero.jpg" media="(min-width: 0px)"> <!-- Mobile Screens -->
-        <img src="<?=$root?>/assets/img/hero.jpg" alt="SMUK-bil" role="presentation">
+        <source srcset="<?= $root ?>/assets/img/hero.jpg" media="(min-width: 1290px)"> <!-- Desktop Screens -->
+        <source srcset="<?= $root ?>/assets/img/hero.jpg" media="(min-width: 960px)"> <!-- Tablet Screens -->
+        <source srcset="<?= $root ?>/assets/img/hero.jpg" media="(min-width: 0px)"> <!-- Mobile Screens -->
+        <img src="<?= $root ?>/assets/img/hero.jpg" alt="SMUK-bil" role="presentation">
     </picture>
     <!-- HERO IMAGE (end) -->
 
@@ -17,16 +17,26 @@ require 'includes/header.php'; ?>
         <section class="col-md-4 popular__main">
             <h3 class="popular__main--headline">Populære bilmærker</h3>
             <ul class="popular__main--list">
-                <li><a href="#">Audi</a></li>
-                <li><a href="#">BMW</a></li>
-                <li><a href="#">Ford</a></li>
-                <li><a href="#">Mazda</a></li>
-                <li><a href="#">Mercedes</a></li>
-                <li><a href="#">Peugeot</a></li>
-                <li><a href="#">Renault</a></li>
-                <li><a href="#">Seat</a></li>
-                <li><a href="#">Toyota</a></li> 
-                <li><a href="#">VW</a></li>
+                <div class="row">
+                    <li class="col-md-6"><a href="#">Audi</a></li>
+                    <li class="col-md-6"><a href="#">BMW</a></li>
+                </div>
+                <div class="row">
+                    <li class="col-md-6"><a href="#">Ford</a></li>
+                    <li class="col-md-6"><a href="#">Mazda</a></li>
+                </div>
+                <div class="row">
+                    <li class="col-md-6"><a href="#">Mercedes</a></li>
+                    <li class="col-md-6"><a href="#">Peugeot</a></li>
+                </div>
+                <div class="row">
+                    <li class="col-md-6"><a href="#">Renault</a></li>
+                    <li class="col-md-6"><a href="#">Seat</a></li>
+                </div>
+                <div class="row">
+                    <li class="col-md-6"><a href="#">Toyota</a></li>
+                    <li class="col-md-6"><a href="#">VW</a></li>
+                </div>
             </ul>
         </section>
         <!-- POPULAR BRANDS (end) -->
@@ -67,7 +77,7 @@ require 'includes/header.php'; ?>
 
     <!-- SEARCH INSPIRATION (start) -->
     <section class="inspiration__main">
-        <h3 class="inspiration__main--headline">Inspiration til din Søgning</h3>
+        <h3 class="inspiration__main--headline">Inspiration til din søgning</h3>
         <!-- First Row -->
         <div class="row">
             <a href="#" class="col-md-6 inspiration__main--category">
