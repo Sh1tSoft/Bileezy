@@ -9,12 +9,11 @@ include '../includes/dbh.inc.php';
 
 
 <!------------------------------------------------------ CREATE MODEL ------------------------------------------------------>
-
+<h1 class="container"><a class="create__button" href="?create">Opret Model</a></h1>
 
 <?php if (isset($_GET['create'])) : ?>
     <section class="container">
 
-        <h1><a class="create__button" href="?create">Opret Model</a></h1>
 
         <form class="cms__form" action="/includes/createcarmodel.php" method="POST">
             <div class="form-group borders row">
