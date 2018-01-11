@@ -70,7 +70,7 @@
     <section class="header__nav">
         <ul>
             <li><a href="<?=$root?>/index.php">Forside</a></li>
-            <li><a href="<?=$root?>/products.php">Bilannoncer</a></li>
+            <li><a href="<?=$root?>/products-list.php">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>

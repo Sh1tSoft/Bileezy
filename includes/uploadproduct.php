@@ -111,7 +111,7 @@ if(isset($_POST['submit'])) {
                         mysqli_stmt_execute($stmt2);
                     }
                         $conn->close();
-                        header("Location: ".$doc_root."/admin/products.php?added");
+                        header("Location: ".$doc_root."/create/product.php?added");
                 
                 }
         }
