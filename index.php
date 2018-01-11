@@ -5,10 +5,10 @@ require 'includes/header.php'; ?>
 <main class="container">
     <!-- HERO IMAGE (start) -->
     <picture class="hero__img--main">
-        <source srcset="#" media="min-width: 1290px"> <!-- Desktop Screens -->
-        <source srcset="#" media="min-width: 960px"> <!-- Tablet Screens -->
-        <source srcset="#" media="min-width: 0px"> <!-- Mobile Screens -->
-        <img src="#" alt="SMUK-bil" role="presentation">
+        <source srcset="<?=$root?>/assets/img/hero.jpg" media="(min-width: 1290px)"> <!-- Desktop Screens -->
+        <source srcset="<?=$root?>/assets/img/hero.jpg" media="(min-width: 960px)"> <!-- Tablet Screens -->
+        <source srcset="<?=$root?>/assets/img/hero.jpg" media="(min-width: 0px)"> <!-- Mobile Screens -->
+        <img src="<?=$root?>/assets/img/hero.jpg" alt="SMUK-bil" role="presentation">
     </picture>
     <!-- HERO IMAGE (end) -->
 
