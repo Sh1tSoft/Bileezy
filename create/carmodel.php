@@ -13,7 +13,7 @@ include '../includes/dbh.inc.php';
     <section class="container">
 
 
-        <form class="cms__form" action="/includes/createcarmodel.php" method="POST">
+        <form class="cms__form" action="<?=$root?>/includes/createcarmodel.php" method="POST">
             <div class="form-group borders row">
                 <label class="col-md-2" for="brand">Mærke</label>
 
@@ -221,7 +221,7 @@ include '../includes/dbh.inc.php';
 
     <?php if ($rowall = $resultall->fetch_assoc()) : ?>
 
-    <form action="/includes/updatecarmodel.php" method="POST">
+    <form action="<?=$root?>/includes/updatecarmodel.php" method="POST">
         <label for="brand">Brand</label>
         <select name="brand" id="category">
             <?php
