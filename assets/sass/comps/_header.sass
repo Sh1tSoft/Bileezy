@@ -4,6 +4,10 @@
     font-size: 16px
   .header__logo
     padding-bottom: 20px
+  .header__responsive--icons
+    text-align: right
+    i:first-child
+      color: $brand__button
   .header__search
     padding-bottom: 5px
     .header__search--input
@@ -16,34 +20,42 @@
       &:focus
         box-shadow: none
   .header__account
-    text-align: left
-    a
-      &:first-child
-        border-right: 2px solid $brand__button
-        padding-right: 10px
-        margin-right: 10px
+    display: none
   .header__divider
     padding: 4px
     border-bottom: 1px solid $brand__button
   .header__nav
-    li
-      display: inline-block
-      padding: 10px
-      &:first-child
-        padding-left: 0
+    display: none
+
 
 
 /*-- Desktop styles
-@media only screen and (min-width: 960px)
+@media only screen and (min-width: 768px)
   .header__main
     .header__logo
       padding-bottom: 0
+    .header__responsive--icons
+      display: none
     .header__search
-      padding: 0 50px
-      padding-top: 3px
+      padding: 3px 0 0 0
+      @media only screen and (min-width: 992px)
+        padding: 3px 50px 0 50px
     .header__account
       padding-top: 8px
     .header__divider
       padding: 10px
     .header__account
+      display: block
       text-align: right
+      a
+        &:first-child
+          border-right: 2px solid $brand__button
+          padding-right: 10px
+          margin-right: 10px
+    .header__nav
+      display: block
+      li
+        display: inline-block
+        padding: 10px
+        &:first-child
+          padding-left: 0
