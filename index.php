@@ -62,7 +62,7 @@ require 'includes/header.php'; ?>
                        <img src="assets/img/3.jpg">
                         <!-- <img class="card-img-top" src="assets/img/products/<?= $imgRow['image_path'] ?>"
                              alt="produkt-billede"> -->
-                        <div class="card-block products__db--car">
+                        <div class="card-block">
                             <h4 class="card-title products__name"><?= $row['model'] ?></h4>
                             <p class="card-text products__description">Kørt <?= $row['mileage'] ?> km</p>
                             <a href="#" class="products__price"><?= $row['price'] ?> kr</a>
