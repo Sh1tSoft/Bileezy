@@ -3,6 +3,7 @@
 </head>
 
 <?php
+$pageTitle = "Opret model";
 include '../includes/header.php';
 include '../includes/dbh.inc.php';
 ?>
