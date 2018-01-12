@@ -18,24 +18,24 @@ require 'includes/header.php'; ?>
             <h3 class="popular__main--headline">Populære bilmærker</h3>
             <ul class="popular__main--list">
                 <div class="row">
-                    <li class="col-md-6"><a href="#">Audi</a></li>
-                    <li class="col-md-6"><a href="#">BMW</a></li>
+                    <button type="button" class="btn btn-outline-secondary btn-lg"><li class="col-md-6"><a href="#">Audi</a></li></button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg"><li class="col-md-6"><a href="#">BMW</a></li></button>
                 </div>
                 <div class="row">
-                    <li class="col-md-6"><a href="#">Ford</a></li>
-                    <li class="col-md-6"><a href="#">Mazda</a></li>
+                   <button type="button" class="btn btn-outline-secondary btn-lg"><li class="col-md-6"><a href="#">Ford</a></li></button>
+                   <button type="button" class="btn btn-outline-secondary btn-lg"><li class="col-md-6"><a href="#">Mazda</a></li></button>
                 </div>
                 <div class="row">
-                    <li class="col-md-6"><a href="#">Mercedes</a></li>
-                    <li class="col-md-6"><a href="#">Peugeot</a></li>
+                   <button type="button" class="btn btn-outline-secondary btn-lg"> <li class="col-md-6"><a href="#">Mercedes</a></li></button>
+                   <button type="button" class="btn btn-outline-secondary btn-lg"> <li class="col-md-6"><a href="#">Peugeot</a></li></button>
                 </div>
                 <div class="row">
-                    <li class="col-md-6"><a href="#">Renault</a></li>
-                    <li class="col-md-6"><a href="#">Seat</a></li>
+                   <button type="button" class="btn btn-outline-secondary btn-lg"> <li class="col-md-6"><a href="#">Renault</a></li></button>
+                   <button type="button" class="btn btn-outline-secondary btn-lg"> <li class="col-md-6"><a href="#">Seat</a></li></button>
                 </div>
                 <div class="row">
-                    <li class="col-md-6"><a href="#">Toyota</a></li>
-                    <li class="col-md-6"><a href="#">VW</a></li>
+                    <button type="button" class="btn btn-outline-secondary btn-lg"><li class="col-md-6"><a href="#">Toyota</a></li></button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg"><li class="col-md-6"><a href="#">VW</a></li></button>
                 </div>
             </ul>
         </section>
@@ -57,7 +57,7 @@ require 'includes/header.php'; ?>
                     $imgRow = $imgResult->fetch_assoc();
                     */?>
 
-                    <div class="card products__newest--card col-sm-3">
+                    <div class="card products__newest--card col-md-3 col-sm-6">
                         <!-- PLACEHOLDER -->
                        <img src="assets/img/3.jpg">
                         <!-- <img class="card-img-top" src="assets/img/products/<?= $imgRow['image_path'] ?>"
@@ -66,7 +66,7 @@ require 'includes/header.php'; ?>
                             <h4 class="card-title products__name"><?= $row['model'] ?></h4>
                             <p class="card-text products__description">Kørt <?= $row['mileage'] ?> km</p>
                             <a href="#" class="products__price"><?= $row['price'] ?> kr</a>
-                            <p class="card-text products__description"><?= $row['description'] ?></p>
+                            <p class="card-text products__description"><?= $row['description_text'] ?></p>
                         </div>
                     </div>
 
