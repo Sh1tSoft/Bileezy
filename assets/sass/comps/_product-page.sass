@@ -182,7 +182,7 @@
         text-align: left
 
     .gear
-      margin: 16px 0
+      margin: 40px 0
       h6
         font-size: 18px
       ul li
@@ -190,3 +190,91 @@
         padding: 0 50px 0 0
         font-weight: 400
         font-size: 16px
+
+    .specs
+      margin: 40px 0
+      width: 100%
+      .specs-title h6
+        font-size: 14px
+        border-bottom: 2px solid #000
+      .specs-input li
+        text-align: left
+
+  table
+    width: 100%
+    tbody
+      border-bottom: 4px solid #212121
+
+  .table-fill
+  background: white
+  border-radius: 3px
+  border-collapse: collapse
+  height: 320px
+  margin: auto
+  max-width: 600px
+  padding: 5px
+  width: 100%
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+  animation: float 5s infinite
+
+th
+  color: #fff
+  background: #212121
+  border-bottom: 4px solid #9ea7af
+  border-right: 1px solid #343a45
+  font-size: 18px
+  font-weight: 100
+  padding: 24px
+  text-align: left
+  vertical-align: middle
+  &:first-child
+    border-top-left-radius: 3px
+  &:last-child
+    border-top-right-radius: 3px
+    border-right: none
+
+tr
+  border-top: 1px solid #C1C3D1
+  border-bottom-: 1px solid #C1C3D1
+  color: #666B85
+  font-size: 16px
+  font-weight: normal
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1)
+  &:hover td
+    background: $brand__button
+    color: #FFFFFF
+    border-top: 1px solid #212121
+  &:first-child
+    border-top: none
+  &:last-child
+    border-bottom: none
+  &:nth-child(odd)
+    td
+      background: #EBEBEB
+    &:hover td
+      background: $brand__button
+  &:last-child td
+    &:first-child
+      border-bottom-left-radius: 3px
+    &:last-child
+      border-bottom-right-radius: 3px
+
+td
+  background: #FFFFFF
+  padding: 20px
+  text-align: left
+  vertical-align: middle
+  font-weight: 300
+  font-size: 16px
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1)
+  border-right: 1px solid #C1C3D1
+  &:last-child
+    border-right: 0px
+
+th, td
+  &.text-left
+    text-align: left
+  &.text-center
+    text-align: center
+  &.text-right
+    text-align: right
