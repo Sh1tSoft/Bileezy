@@ -1,12 +1,11 @@
-<head>
-    <link rel="stylesheet" href="../assets/css/cms.css">
-</head>
-
 <?php
+$pageTitle = "Model";
 include '../includes/header.php';
 include '../includes/dbh.inc.php';
 ?>
-
+<head>
+    <link rel="stylesheet" href="../assets/css/cms.css">
+</head>
 
 <!------------------------------------------------------ CREATE MODEL ------------------------------------------------------>
 <h1 class="container"><a class="create__button" href="?create">Opret Model</a></h1>
@@ -24,7 +23,7 @@ include '../includes/dbh.inc.php';
                     $sql = "SELECT * FROM car_brands";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc()) : ?>
-                        <option value="<?= $row['brand'] ?>"><?= $row['brand'] ?></option>
+                        <option value="<?= $row['id'] ?>"><?= $row['brand'] ?></option>
                     <?php endwhile; ?>
                 </select>
             </div>

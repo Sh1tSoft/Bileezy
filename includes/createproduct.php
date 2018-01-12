@@ -2,11 +2,22 @@
     include_once 'dbh.inc.php';
     include "../WideImage/WideImage.php";
 
-if(isset($_POST['submit'])) {
+if(isset($_POST['create'])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        $brand = mysqli_real_escape_string($conn, $_POST['brand']);
+        $modelName = mysqli_real_escape_string($conn, $_POST['model']);
+        $mileAge = mysqli_real_escape_string($conn, $_POST['mileage']);
+        $price = mysqli_real_escape_string($conn, $_POST['price']);
+        $desc = mysqli_real_escape_string($conn, $_POST['description']);
+        $condition = mysqli_real_escape_string($conn, $_POST['condition']);
+        $lastCheck = mysqli_real_escape_string($conn, $_POST['last_check']);
+        $service = mysqli_real_escape_string($conn, $_POST['service']);
+        $color = mysqli_real_escape_string($conn, $_POST['color']);
+        $registrationDate = mysqli_real_escape_string($conn, $_POST['registration_date']);
+
         $fileNew = false;
-        if (!empty($_FILES)) {
+        if ($_FILES['file']['error'] == 0) {
 
             $filearray = $_FILES;
 
@@ -64,8 +75,8 @@ if(isset($_POST['submit'])) {
                 if ($fileNew == true & $fileValidated == true) {
                     
                     //Insert the image into the database
-                    $sql = "INSERT INTO product_images (image_path)
-                            VALUES (?);";
+                    $sql = "INSERT INTO products (brand, model, mileage, price, description_text, car_condition, last_check, service_ok, color, registration_date, image_path)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                     //Create second prepared statement
                     $stmt2 = mysqli_stmt_init($conn);
                     
@@ -76,45 +87,38 @@ if(isset($_POST['submit'])) {
                         exit();
                     } else {
                         //Bind parameters to the placeholder
-                        mysqli_stmt_bind_param($stmt2, "s", $fileDestinationMediumBase);
+                        mysqli_stmt_bind_param($stmt2, "siiisssisss", $brand, $modelName, $mileAge, $price, $desc, $condition, $lastCheck, $service, $color, $registrationDate, $fileDestinationMediumBase);
 
                         //Run query in database
                         mysqli_stmt_execute($stmt2);
-                        $fileUploaded = true;
+                        header("Location: ../create/product.php?success");
+                        exit();
                     }
                 }
             }
 
-                if ($fileUploaded == true) {
-                    header("Location: ../create/product.php?success");
-                    exit();
-                }
+        } elseif ($_FILES['file']['error'] == 4) {
+            //Insert the image into the database
+            $sql = "INSERT INTO products (brand, model, mileage, price, description_text, car_condition, last_check, service_ok, color, registration_date)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            //Create second prepared statement
+            $stmt2 = mysqli_stmt_init($conn);
+            
 
-                if ($fileNew == false) {
-                    
-                    //Insert the image into the database
-                    $sql = "INSERT INTO products (product_no, product_title, product_price, product_units, product_category, product_link)
-                            VALUES (?, ?, ?, ?, ?, ?);";
-                    //Create second prepared statement
-                    $stmt2 = mysqli_stmt_init($conn);
-                    
+            //Check if prepared statement fails
+            if (!mysqli_stmt_prepare($stmt2, $sql)) {
+                header("Location: ../index.php?error");
+                exit();
+            } else {
+                //Bind parameters to the placeholder
+                mysqli_stmt_bind_param($stmt2, "siiisssiss", $brand, $modelName, $mileAge, $price, $desc, $condition, $lastCheck, $service, $color, $registrationDate);
 
-                    //Check if prepared statement fails
-                    if (!mysqli_stmt_prepare($stmt2, $sql)) {
-                        header("Location: ../index.php?login=error2");
-                        exit();
-                    } else {
-                        //Bind parameters to the placeholder
-                        mysqli_stmt_bind_param($stmt2, "ssssss", $productNo, $productName, $productPrice, $productUnits, $productCategory, $productLink);
-
-                        //Run query in database
-                        mysqli_stmt_execute($stmt2);
-                    }
-                        $conn->close();
-                        header("Location: ".$doc_root."/create/product.php?added");
-                
-                }
+                //Run query in database
+                mysqli_stmt_execute($stmt2);
+                header("Location: ../create/product.php?success");
+                exit();
         }
     }
+}
 }
 ?>

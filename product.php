@@ -34,7 +34,7 @@ require 'includes/header.php'; ?>
       </div>
 
       <div class="car-keypoint">
-        <p>Brandstof:</p>
+        <p>Brændstof:</p>
       </div>
 
       <div class="car-keypoint">

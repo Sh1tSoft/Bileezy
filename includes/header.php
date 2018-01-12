@@ -35,9 +35,14 @@
 <header class="header__main container">
     <div class="row">
         <!-- Header logo -->
-        <a class="header__logo col-md-3" href="#"><img src="<?=$root?>/assets/img/logo.png"></a>
+        <a class="header__logo col-md-3 col-5" href="#"><img src="<?=$root?>/assets/img/logo.png"></a>
+        <!-- RESPONSIVE ICONS -->
+        <nav class="header__responsive--icons col">
+            <i class="material-icons">person</i>
+            <i class="material-icons">menu</i>
+        </nav>
         <!-- Search bar -->
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-5">
             <div class="input-group header__search">
                 <input type="text" class="form-control header__search--input" placeholder="Søg på bilmærker her...">
                 <span class="input-group-btn header__search--span">
@@ -46,7 +51,7 @@
             </div>
         </div>
         <!-- Account & Login -->
-        <div class="header__account col-md-3">
+        <div class="header__account col-lg-3 col-md-4">
           <?php if (!empty($_SESSION['email'])) : ?>
           <?php else: ?>
               <a <?php if (basename($_SERVER['PHP_SELF']) == "login.php") ?> href="<?=$root?>/regi.php">Opret Konto</a>
@@ -69,14 +74,14 @@
     <div class="header__divider"></div>
 
     <!-- NAVBAR -->
-    <section class="header__nav">
+    <nav class="header__nav">
         <ul>
             <li><a href="<?=$root?>/index.php">Forside</a></li>
             <li><a href="<?=$root?>/products-list.php">Bilannoncer</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>
-    </section>
+    </nav>
 
 
 </header>
