@@ -52,20 +52,21 @@ require 'includes/header.php'; ?>
                 while ($row = $result->fetch_assoc()) : ?>
                     <?php
                     /* - Image Query - */
-                    $imgQuery = "SELECT image_path FROM product_image WHERE product_id = " . $row['id'] . " LIMIT 1";
+                    /*$imgQuery = "SELECT image_path FROM product_image WHERE product_id = " . $row['id'] . " LIMIT 1";
                     $imgResult = $conn->query($imgQuery);
                     $imgRow = $imgResult->fetch_assoc();
-                    ?>
+                    */?>
 
                     <div class="card products__newest--card col-sm-3">
                         <!-- PLACEHOLDER -->
-                        <img src="assets/img/3.jpg">
+                       <!-- <img src="assets/img/3.jpg">-->
                         <!-- <img class="card-img-top" src="assets/img/products/<?= $imgRow['image_path'] ?>"
                              alt="produkt-billede"> -->
                         <div class="card-block">
                             <h4 class="card-title products__name"><?= $row['model'] ?></h4>
-                            <p class="card-text products__description"><?= $row['mileage'] ?></p>
+                            <p class="card-text products__description">Kørt <?= $row['mileage'] ?> km</p>
                             <a href="#" class="products__price"><?= $row['price'] ?> kr</a>
+                            <p class="card-text products__description"><?= $row['description'] ?></p>
                         </div>
                     </div>
 
