@@ -75,7 +75,7 @@
     <nav class="header__nav">
         <ul>
             <li><a href="<?=$root?>/index.php">Forside</a></li>
-            <li><a href="<?=$root?>/products-list.php">Bilannoncer</a></li>
+            <li><a href="<?=$root?>/product.php">Bilannoncer</a></li>
             <li><a href="<?=$root?>/contact.php">Om</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>
