@@ -3,6 +3,10 @@
     include '../includes/header.php';
 ?>
 
+<?php if (empty($_SESSION['email'])) : ?>
+    <?=header("Location: ../login.php")?>
+<?php else : ?>
+
 <style>
     .img-container {
         background: grey;
@@ -17,6 +21,7 @@
         margin: auto;
     }
 </style>
+
 <h1 class="container">Opret Produkt</h1>
 
 <section class="container">
@@ -110,3 +115,6 @@ var yyyy = today.getFullYear();
 today = yyyy+'-'+mm+'-'+dd;
 document.getElementById("currentdate").setAttribute("max", today);
 </script>
+
+
+<?php endif; ?>

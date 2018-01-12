@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once 'dbh.inc.php';
     include "../WideImage/WideImage.php";
 
@@ -15,6 +16,8 @@ if(isset($_POST['create'])) {
         $service = mysqli_real_escape_string($conn, $_POST['service']);
         $color = mysqli_real_escape_string($conn, $_POST['color']);
         $registrationDate = mysqli_real_escape_string($conn, $_POST['registration_date']);
+
+        $uid = $_SESSION['email'];
 
         $fileNew = false;
         if ($_FILES['file']['error'] == 0) {
@@ -75,8 +78,8 @@ if(isset($_POST['create'])) {
                 if ($fileNew == true & $fileValidated == true) {
                     
                     //Insert the image into the database
-                    $sql = "INSERT INTO products (brand, model, mileage, price, description_text, car_condition, last_check, service_ok, color, registration_date, image_path)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                    $sql = "INSERT INTO products (brand, model, mileage, price, description_text, car_condition, last_check, service_ok, color, registration_date, image_path, seller)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                     //Create second prepared statement
                     $stmt2 = mysqli_stmt_init($conn);
                     
@@ -87,7 +90,7 @@ if(isset($_POST['create'])) {
                         exit();
                     } else {
                         //Bind parameters to the placeholder
-                        mysqli_stmt_bind_param($stmt2, "siiisssisss", $brand, $modelName, $mileAge, $price, $desc, $condition, $lastCheck, $service, $color, $registrationDate, $fileDestinationMediumBase);
+                        mysqli_stmt_bind_param($stmt2, "siiisssissss", $brand, $modelName, $mileAge, $price, $desc, $condition, $lastCheck, $service, $color, $registrationDate, $fileDestinationMediumBase, $uid);
 
                         //Run query in database
                         mysqli_stmt_execute($stmt2);
@@ -99,8 +102,8 @@ if(isset($_POST['create'])) {
 
         } elseif ($_FILES['file']['error'] == 4) {
             //Insert the image into the database
-            $sql = "INSERT INTO products (brand, model, mileage, price, description_text, car_condition, last_check, service_ok, color, registration_date)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            $sql = "INSERT INTO products (brand, model, mileage, price, description_text, car_condition, last_check, service_ok, color, registration_date, seller)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
             //Create second prepared statement
             $stmt2 = mysqli_stmt_init($conn);
             
@@ -111,7 +114,7 @@ if(isset($_POST['create'])) {
                 exit();
             } else {
                 //Bind parameters to the placeholder
-                mysqli_stmt_bind_param($stmt2, "siiisssiss", $brand, $modelName, $mileAge, $price, $desc, $condition, $lastCheck, $service, $color, $registrationDate);
+                mysqli_stmt_bind_param($stmt2, "siiisssisss", $brand, $modelName, $mileAge, $price, $desc, $condition, $lastCheck, $service, $color, $registrationDate, $uid);
 
                 //Run query in database
                 mysqli_stmt_execute($stmt2);

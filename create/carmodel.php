@@ -7,6 +7,10 @@ include '../includes/dbh.inc.php';
     <link rel="stylesheet" href="../assets/css/cms.css">
 </head>
 
+<?php if (empty($_SESSION['email'])) : ?>
+    <?=header("Location: ../login.php")?>
+<?php else : ?>
+
 <!------------------------------------------------------ CREATE MODEL ------------------------------------------------------>
 <h1 class="container"><a class="create__button" href="?create">Opret Model</a></h1>
 
@@ -417,3 +421,5 @@ include '../includes/dbh.inc.php';
 
 
 <?php include '../includes/footer.php'; ?>
+
+<?php endif; ?>
