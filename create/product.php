@@ -17,9 +17,7 @@
         margin: auto;
     }
 </style>
-
 <h1 class="container">Opret Produkt</h1>
-
 
 <section class="container">
     <form class="cms__form" action="/includes/createproduct.php" method="POST" enctype="multipart/form-data">
@@ -104,10 +102,10 @@ var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
  if(dd<10){
         dd='0'+dd
-    } 
+    }
     if(mm<10){
         mm='0'+mm
-    } 
+    }
 
 today = yyyy+'-'+mm+'-'+dd;
 document.getElementById("currentdate").setAttribute("max", today);
