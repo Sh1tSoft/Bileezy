@@ -1,7 +1,7 @@
 <?php
 $dbServername = "localhost";
-$dbUsername = "admin";
-$dbPassword = "admin";
+$dbUsername = "root";
+$dbPassword = "";
 $dbName = "bileezy";
 
 
@@ -11,5 +11,5 @@ if ($conn->connect_errno) {
 }
 $conn->set_charset("utf8");
 
-$root = "/bileezy";
+$root = "";
 ?>
