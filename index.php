@@ -59,10 +59,10 @@ require 'includes/header.php'; ?>
 
                     <div class="card products__newest--card col-sm-3">
                         <!-- PLACEHOLDER -->
-                       <!-- <img src="assets/img/3.jpg">-->
+                       <img src="assets/img/3.jpg">
                         <!-- <img class="card-img-top" src="assets/img/products/<?= $imgRow['image_path'] ?>"
                              alt="produkt-billede"> -->
-                        <div class="card-block">
+                        <div class="card-block products__db--car">
                             <h4 class="card-title products__name"><?= $row['model'] ?></h4>
                             <p class="card-text products__description">Kørt <?= $row['mileage'] ?> km</p>
                             <a href="#" class="products__price"><?= $row['price'] ?> kr</a>
