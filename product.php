@@ -1,24 +1,25 @@
-<?php
-$pageTitle = "Forside";
-require 'includes/header.php'; ?>
+<?php require 'includes/header.php'; ?>
 <!-- HEADER & BODY (start) -->
 
 <?php
-
- $query = "SELECT * FROM `car_model_info` WHERE ID='3' ";
- $result = $conn->query($query);
- $query2 = "SELECT * FROM `products` WHERE ID='3' ";
+ $pageTitle = "Forside";
+ $product_select = $_GET['product'];
+ $query2 = "SELECT * FROM `products` WHERE ID= $product_select";
  $result2 = $conn->query($query2);
+
  ?>
 
 
 <section class="container">
   <div class="product-item">
-      <img src="assets/img/tesla.jpg" alt="">
+    <?php while($row2 = $result2->fetch_assoc()) : ?>
+      <?php $model = $row2['model'];
+      $query = "SELECT * FROM `car_model_info` WHERE ID='".$model."' ";
+      $result = $conn->query($query); ?>
+      <img src="<?=$row2['image_path']?>" alt="">
         <h6 class="car-info">
-          <?php while($row = $result -> fetch_assoc()) : ?>
-            <?php while($row2 = $result2 -> fetch_assoc()) : ?>
-          <span class="car-name"><?=$row['brand']?> <?=$row['model']?></span>
+              <?php while($row = $result->fetch_assoc()) : ?>
+          <span class="car-name"><?=$row2['brand']?> <?=$row['model']?></span>
           <span class="car-info-splitter">|</span>
           <span class="car-price"><?=$row2['price']?></span>
         </h6>
@@ -26,19 +27,19 @@ require 'includes/header.php'; ?>
     <div class="keypoint-container">
 
       <div class="car-keypoint">
-        <p>Årgang:</p><span>Test</span>
+        <p>Årgang:</p><span><?=$row['year_start']?></span>
       </div>
 
       <div class="car-keypoint">
-        <p>Km:</p>
+        <p>Km:</p><span><?=$row2['mileage']?></span>
       </div>
 
       <div class="car-keypoint">
-        <p>Brændstof:</p>
+        <p>Brændstof:</p><span><?=$row['fuel_type']?></span>
       </div>
 
       <div class="car-keypoint">
-        <p>Km/l:</p>
+        <p>Km/l:</p><span><?=$row['consumption']?></span>
       </div>
 
     </div>
@@ -50,21 +51,9 @@ require 'includes/header.php'; ?>
 
       <div class="description">
         <h6>Beskrivelse</h6>
-        <p class="desc-text toggle-desc">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+        <p class="desc-text toggle-desc"><?=$row2['description_text']?></p>
       </div>
       <h6 class="show-desc">se mere</h6>
-
-    <div class="gear">
-      <h6>Udstyr</h6>
-      <ul>
-        <li>Aircondition</li>
-        <li>Aircondition</li>
-        <li>Aircondition</li>
-        <li>Aircondition</li>
-        <li>Aircondition</li>
-        <li>Elruder</li>
-      </ul>
-    </div>
 
   </div>
 
@@ -167,7 +156,7 @@ require 'includes/header.php'; ?>
 
         <tr>
           <td class="text-left">Vægt</td>
-          <td class="text-left"><?=$row['weight']?></td>
+          <td class="text-left"><?=$row['car_weight']?></td>
         </tr>
 
         <tr>
