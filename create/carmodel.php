@@ -1,4 +1,5 @@
 <?php
+$pageTitle = "Model";
 include '../includes/header.php';
 include '../includes/dbh.inc.php';
 ?>
@@ -22,7 +23,7 @@ include '../includes/dbh.inc.php';
                     $sql = "SELECT * FROM car_brands";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc()) : ?>
-                        <option value="<?= $row['brand'] ?>"><?= $row['brand'] ?></option>
+                        <option value="<?= $row['id'] ?>"><?= $row['brand'] ?></option>
                     <?php endwhile; ?>
                 </select>
             </div>
